@@ -5,6 +5,28 @@
   const DEVICE_STORAGE_KEY = 'nclex:device-id:v1';
   const ACCESS_OFFSET_MINUTES = 3 * 60 + 13;
   const ACCESS_TOLERANCE_MINUTES = 2;
+  const HAPTICS_STORAGE_KEY = 'nclex:haptics:v1';
+  const NOTIFICATION_STORAGE_KEY = 'nclex:notifications:v1';
+  const NOTIFICATION_LAST_KEY = 'nclex:notification:last:v1';
+  const NOTIFICATION_INDEX_KEY = 'nclex:notification:index:v1';
+
+  function premiumHaptic(kind) {
+    if (!('vibrate' in navigator)) return false;
+    try {
+      if (localStorage.getItem(HAPTICS_STORAGE_KEY) === 'off') return false;
+    } catch (_error) { /* use default */ }
+    const patterns = {
+      feather: 3,
+      scroll: 4,
+      tap: 8,
+      select: [8, 18, 5],
+      success: [12, 24, 18],
+      error: [24, 34, 24],
+      close: [7, 16, 7]
+    };
+    try { return navigator.vibrate(patterns[kind] || patterns.tap); }
+    catch (_error) { return false; }
+  }
 
   function createDeviceId() {
     if (window.crypto && typeof window.crypto.randomUUID === 'function') return window.crypto.randomUUID();
@@ -129,6 +151,7 @@
     });
 
     reveal.addEventListener('click', function () {
+      premiumHaptic('tap');
       const showing = input.type === 'text';
       input.type = showing ? 'password' : 'text';
       reveal.textContent = showing ? 'Show' : 'Hide';
@@ -139,6 +162,7 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       if (!isCurrentAccessPassword(input.value)) {
+        premiumHaptic('error');
         input.setAttribute('aria-invalid', 'true');
         showMessage('That password is not valid right now. Check the current code and try again.', 'error');
         gate.querySelector('.access-card').classList.remove('shake');
@@ -147,6 +171,7 @@
         return;
       }
 
+      premiumHaptic('success');
       submit.disabled = true;
       submit.textContent = 'Activating…';
       if (!saveAccessGrant()) {
@@ -171,6 +196,12 @@
   const fallbackThumb = 'assets/fallback.svg';
   let hlsInstance = null;
   let activeVideoId = null;
+  let playerState = null;
+  let playerMountObserver = null;
+  let notificationTimer = null;
+  let progressWriteAt = 0;
+  let lastScrollHapticAt = 0;
+  let lastScrollHapticY = 0;
 
   const ICONS = {
     menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v1.5H4V6.5Zm0 5h16V13H4v-1.5Zm0 5h16V18H4v-1.5Z"/></svg>',
@@ -191,7 +222,10 @@
     next: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2V5ZM5 5l10 7-10 7V5Z"/></svg>',
     collection: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H4V4Zm1.5 1.5v9h13v-9h-13ZM7 18h10v1.5H7V18Z"/></svg>',
     info: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Zm0 1.5a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm-.8 4h1.6v1.7h-1.6V8Zm0 3.3h1.6V17h-1.6v-5.7Z"/></svg>',
-    music: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3v12.3a3.4 3.4 0 1 1-1.5-2.8V6.1l-8 2v9.3A3.4 3.4 0 1 1 8 14.6V6.8L19 3Z"/></svg>'
+    music: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3v12.3a3.4 3.4 0 1 1-1.5-2.8V6.1l-8 2v9.3A3.4 3.4 0 1 1 8 14.6V6.8L19 3Z"/></svg>',
+    bell: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.4 2.4 0 0 0 2.3-2h-4.6A2.4 2.4 0 0 0 12 22Zm7-5.5-1.7-2.1V10a5.4 5.4 0 0 0-4.5-5.3V3a.8.8 0 0 0-1.6 0v1.7A5.4 5.4 0 0 0 6.7 10v4.4L5 16.5V18h14v-1.5ZM7.1 16.4l1.2-1.5V10a3.7 3.7 0 1 1 7.4 0v4.9l1.2 1.5H7.1Z"/></svg>',
+    bellOff: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4.3 3.2 16.5 16.5-1.1 1.1-3-3H5v-1.5l1.7-2.1V10c0-1.1.3-2.2.9-3.1L3.2 4.3l1.1-1.1Zm4.4 4.7c-.3.6-.4 1.3-.4 2.1v4.7l1.2 1.5h5.6L8.7 9.8V7.9ZM12 2.2a.8.8 0 0 1 .8.8v1.7a5.4 5.4 0 0 1 4.5 5.3v4.2l-1.6-1.6V10a3.7 3.7 0 0 0-4.6-3.6L9.8 5.1c.5-.2.9-.3 1.4-.4V3a.8.8 0 0 1 .8-.8ZM9.7 20h4.6a2.4 2.4 0 0 1-4.6 0Z"/></svg>',
+    expand: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v1.6H5.6V10H4V4Zm10 0h6v6h-1.6V5.6H14V4ZM4 14h1.6v4.4H10V20H4v-6Zm14.4 0H20v6h-6v-1.6h4.4V14Z"/></svg>'
   };
 
   if (!LIB) {
@@ -206,6 +240,11 @@
   const searchForm = $('#searchForm');
   const toast = $('#toast');
   const topbar = $('#topbar');
+  const persistentPlayer = $('#persistentPlayer');
+  const player = $('#player');
+  const liveProgressFill = $('#liveProgressFill');
+  const notificationPrompt = $('#notificationPrompt');
+  const notificationButton = $('#notificationButton');
 
   const folders = LIB.folders || {};
   const playlists = LIB.playlists || {};
@@ -259,6 +298,70 @@
     showToast.timer = setTimeout(() => toast.classList.remove('show'), 1900);
   }
 
+
+  function installContentProtection() {
+    let lastNoticeAt = 0;
+    const protectedShortcut = event => {
+      const key = String(event.key || '').toLowerCase();
+      const modifier = event.ctrlKey || event.metaKey;
+      const shiftDeveloperShortcut = modifier && event.shiftKey && ['c', 'i', 'j', 'k'].includes(key);
+      const regularProtectedShortcut = modifier && ['c', 'x', 's', 'p', 'u'].includes(key);
+      const selectAllOutsideField = modifier && key === 'a' && !event.target.closest('input, textarea');
+      return event.key === 'F12' || shiftDeveloperShortcut || regularProtectedShortcut || selectAllOutsideField;
+    };
+
+    const showProtectionNotice = () => {
+      const now = Date.now();
+      if (now - lastNoticeAt < 900) return;
+      lastNoticeAt = now;
+      premiumHaptic('error');
+      showToast('Copying and downloading are disabled.');
+    };
+
+    const block = event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      showProtectionNotice();
+      return false;
+    };
+
+    ['copy', 'cut', 'contextmenu', 'dragstart'].forEach(type => {
+      document.addEventListener(type, block, true);
+    });
+
+    document.addEventListener('selectstart', event => {
+      if (event.target.closest('input, textarea')) return;
+      block(event);
+    }, true);
+
+    document.addEventListener('keydown', event => {
+      if (protectedShortcut(event)) block(event);
+    }, true);
+
+    document.addEventListener('keyup', event => {
+      if (String(event.key || '').toLowerCase() === 'printscreen') {
+        try { navigator.clipboard && navigator.clipboard.writeText(''); } catch (_error) { /* best effort */ }
+        showProtectionNotice();
+      }
+    }, true);
+
+    const hardenElement = element => {
+      if (!(element instanceof Element)) return;
+      if (element.matches('img, video, a')) element.setAttribute('draggable', 'false');
+      if (element.matches('video')) {
+        element.setAttribute('controlsList', 'nodownload noremoteplayback');
+        element.setAttribute('disablePictureInPicture', '');
+        try { element.disablePictureInPicture = true; } catch (_error) { /* unsupported */ }
+      }
+      element.querySelectorAll && element.querySelectorAll('img, video, a').forEach(hardenElement);
+    };
+
+    hardenElement(document.documentElement);
+    new MutationObserver(records => {
+      records.forEach(record => record.addedNodes.forEach(node => hardenElement(node)));
+    }).observe(document.documentElement, { childList: true, subtree: true });
+  }
+
   function hashNumber(text) {
     let hash = 0;
     for (const char of String(text || 'NCLEX')) hash = ((hash << 5) - hash) + char.charCodeAt(0);
@@ -298,12 +401,28 @@
     return Number(getProgressMap()[id] || 0);
   }
 
+  function progressPercent(videoId, watchedOverride) {
+    const video = videos[videoId];
+    const duration = Number(video && video.durationSeconds || 0);
+    const watched = Number(watchedOverride == null ? getProgress(videoId) : watchedOverride);
+    if (watched < 1 || duration < 1) return 0;
+    return Math.min(100, Math.max(0, (watched / duration) * 100));
+  }
+
   function progressMarkup(video) {
-    const watched = getProgress(video.id);
-    const duration = Number(video.durationSeconds || 0);
-    if (watched < 2 || duration < 1) return '';
-    const percent = Math.min(100, Math.max(1, (watched / duration) * 100));
-    return `<span class="progress-track"><span class="progress-fill" style="width:${percent.toFixed(1)}%"></span></span>`;
+    const percent = progressPercent(video.id);
+    if (percent <= 0) return '';
+    return `<span class="progress-track" data-progress-track="${esc(video.id)}"><span class="progress-fill" data-progress-for="${esc(video.id)}" style="width:${percent.toFixed(1)}%"></span></span>`;
+  }
+
+  function updateProgressVisuals(videoId, watched) {
+    const percent = progressPercent(videoId, watched);
+    document.querySelectorAll(`[data-progress-for="${CSS.escape(videoId)}"]`).forEach(fill => {
+      fill.style.width = `${percent.toFixed(1)}%`;
+    });
+    if (playerState && playerState.videoId === videoId && liveProgressFill) {
+      liveProgressFill.style.width = `${percent.toFixed(2)}%`;
+    }
   }
 
   function getLastWatched() {
@@ -314,12 +433,224 @@
     try { localStorage.setItem('nclex:lastWatched', id); } catch (_error) { /* ignored */ }
   }
 
-  function saveProgress(id, time) {
+  function saveProgress(id, time, force) {
+    const value = Math.max(0, Number(time) || 0);
+    const now = Date.now();
+    if (!force && now - progressWriteAt < 1500) {
+      updateProgressVisuals(id, value);
+      return;
+    }
+    progressWriteAt = now;
     try {
       const data = getProgressMap();
-      data[id] = Math.floor(time);
+      data[id] = Math.floor(value);
       localStorage.setItem('nclex:progress', JSON.stringify(data));
     } catch (_error) { /* ignored */ }
+    updateProgressVisuals(id, value);
+  }
+
+  function destroyHls() {
+    if (hlsInstance) {
+      hlsInstance.destroy();
+      hlsInstance = null;
+    }
+  }
+
+  function disconnectPlayerMountObserver() {
+    if (playerMountObserver) {
+      playerMountObserver.disconnect();
+      playerMountObserver = null;
+    }
+  }
+
+  function updateMiniPlayerCopy() {
+    if (!playerState) return;
+    const title = $('#miniPlayerTitle');
+    const subtitle = $('#miniPlayerSubtitle');
+    if (title) title.textContent = playerState.title || 'Now playing';
+    if (subtitle) subtitle.textContent = playerState.playlistTitle || playerState.categoryTitle || 'NCLEX Play';
+  }
+
+  function activateMiniPlayer() {
+    if (!playerState || !persistentPlayer) return;
+    if (persistentPlayer.parentElement !== document.body) document.body.appendChild(persistentPlayer);
+    persistentPlayer.hidden = false;
+    persistentPlayer.classList.remove('is-docked');
+    persistentPlayer.classList.add('is-mini');
+    document.body.classList.add('mini-player-visible');
+    updateMiniPlayerCopy();
+  }
+
+  function dockPlayerInWatchPage() {
+    const mount = $('#watchPlayerMount');
+    if (!mount || !playerState || !persistentPlayer) return;
+    persistentPlayer.hidden = false;
+    persistentPlayer.classList.remove('is-mini');
+    persistentPlayer.classList.add('is-docked');
+    document.body.classList.remove('mini-player-visible');
+    mount.appendChild(persistentPlayer);
+    updateMiniPlayerCopy();
+  }
+
+  function observeWatchPlayerMount() {
+    disconnectPlayerMountObserver();
+    const mount = $('#watchPlayerMount');
+    if (!mount || !('IntersectionObserver' in window)) return;
+    playerMountObserver = new IntersectionObserver(entries => {
+      const entry = entries[0];
+      const route = parseRoute();
+      if (!entry || !playerState || route.kind !== 'watch' || route.id !== playerState.videoId) return;
+      if (entry.intersectionRatio < 0.2 && window.scrollY > 160) activateMiniPlayer();
+      else dockPlayerInWatchPage();
+    }, { threshold: [0, 0.2, 0.7] });
+    playerMountObserver.observe(mount);
+  }
+
+  function closePersistentPlayer() {
+    if (playerState && player.currentTime > 0) saveProgress(playerState.videoId, player.currentTime, true);
+    premiumHaptic('close');
+    disconnectPlayerMountObserver();
+    player.pause();
+    destroyHls();
+    player.removeAttribute('src');
+    player.removeAttribute('poster');
+    try { player.load(); } catch (_error) { /* ignored */ }
+    playerState = null;
+    activeVideoId = null;
+    persistentPlayer.hidden = true;
+    persistentPlayer.classList.remove('is-mini', 'is-docked');
+    document.body.classList.remove('mini-player-visible');
+    if (liveProgressFill) liveProgressFill.style.width = '0%';
+  }
+
+  function preparePlayerForRender(route) {
+    if (!playerState || !persistentPlayer) return;
+    disconnectPlayerMountObserver();
+    if (player.currentTime > 0) saveProgress(playerState.videoId, player.currentTime, true);
+    if (persistentPlayer.parentElement !== document.body) document.body.appendChild(persistentPlayer);
+    if (route.kind !== 'watch' || route.id !== playerState.videoId) activateMiniPlayer();
+  }
+
+  function pickMotivation() {
+    const messages = Array.isArray(window.NCLEX_MOTIVATIONS) ? window.NCLEX_MOTIVATIONS : [];
+    if (!messages.length) return '';
+    let previous = -1;
+    try { previous = Number(localStorage.getItem(NOTIFICATION_INDEX_KEY) || -1); } catch (_error) { /* ignored */ }
+    let index = Math.floor(Math.random() * messages.length);
+    if (messages.length > 1 && index === previous) index = (index + 1 + Math.floor(Math.random() * (messages.length - 1))) % messages.length;
+    try { localStorage.setItem(NOTIFICATION_INDEX_KEY, String(index)); } catch (_error) { /* ignored */ }
+    return messages[index];
+  }
+
+  function notificationIsEnabled() {
+    try { return localStorage.getItem(NOTIFICATION_STORAGE_KEY) === 'on' && window.Notification && Notification.permission === 'granted'; }
+    catch (_error) { return false; }
+  }
+
+  function updateNotificationButton() {
+    const enabled = notificationIsEnabled();
+    notificationButton.innerHTML = enabled ? icon('bell') : icon('bellOff');
+    notificationButton.classList.toggle('enabled', enabled);
+    notificationButton.setAttribute('aria-label', enabled ? 'Turn off hourly motivation' : 'Enable hourly motivation');
+    notificationButton.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+  }
+
+  async function showMotivationNotification(force) {
+    if (!notificationIsEnabled() || !('serviceWorker' in navigator)) return false;
+    const now = Date.now();
+    let last = 0;
+    try { last = Number(localStorage.getItem(NOTIFICATION_LAST_KEY) || 0); } catch (_error) { /* ignored */ }
+    if (!force && now - last < 55 * 60 * 1000) return false;
+    const body = pickMotivation();
+    if (!body) return false;
+    try {
+      const registration = await navigator.serviceWorker.ready;
+      await registration.showNotification('NCLEX Play · ਪੜ੍ਹਾਈ ਦਾ ਵੇਲਾ', {
+        body,
+        icon: './assets/icon-192.png',
+        badge: './assets/badge-96.png',
+        tag: 'nclex-hourly-motivation',
+        renotify: true,
+        requireInteraction: false,
+        silent: false,
+        data: { url: './index.html#home', motivation: true },
+        vibrate: [70, 45, 35]
+      });
+      try { localStorage.setItem(NOTIFICATION_LAST_KEY, String(now)); } catch (_error) { /* ignored */ }
+      return true;
+    } catch (_error) {
+      return false;
+    }
+  }
+
+  function scheduleHourlyMotivation() {
+    clearTimeout(notificationTimer);
+    if (!notificationIsEnabled()) return;
+    let last = 0;
+    try { last = Number(localStorage.getItem(NOTIFICATION_LAST_KEY) || 0); } catch (_error) { /* ignored */ }
+    const target = last > 0 ? last + 60 * 60 * 1000 : Date.now() + 60 * 60 * 1000;
+    const delay = Math.max(1000, target - Date.now());
+    notificationTimer = window.setTimeout(async () => {
+      await showMotivationNotification(false);
+      scheduleHourlyMotivation();
+    }, delay);
+  }
+
+  async function registerPeriodicMotivation() {
+    if (!('serviceWorker' in navigator)) return;
+    try {
+      const registration = await navigator.serviceWorker.ready;
+      if ('periodicSync' in registration) {
+        await registration.periodicSync.register('nclex-hourly-motivation', { minInterval: 60 * 60 * 1000 });
+      }
+    } catch (_error) { /* unsupported or browser-controlled */ }
+  }
+
+  async function enableNotifications() {
+    if (!('Notification' in window) || !('serviceWorker' in navigator)) {
+      showToast('Notifications are not supported by this browser.');
+      premiumHaptic('error');
+      return;
+    }
+    const permission = await Notification.requestPermission();
+    if (permission !== 'granted') {
+      try { localStorage.setItem(NOTIFICATION_STORAGE_KEY, 'off'); } catch (_error) { /* ignored */ }
+      updateNotificationButton();
+      notificationPrompt.hidden = true;
+      showToast('Notification permission was not granted.');
+      premiumHaptic('error');
+      return;
+    }
+    try { localStorage.setItem(NOTIFICATION_STORAGE_KEY, 'on'); } catch (_error) { /* ignored */ }
+    notificationPrompt.hidden = true;
+    updateNotificationButton();
+    premiumHaptic('success');
+    await registerPeriodicMotivation();
+    await showMotivationNotification(true);
+    scheduleHourlyMotivation();
+    showToast('Hourly Punjabi motivation is on.');
+  }
+
+  function disableNotifications() {
+    clearTimeout(notificationTimer);
+    try { localStorage.setItem(NOTIFICATION_STORAGE_KEY, 'off'); } catch (_error) { /* ignored */ }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.ready.then(registration => {
+        if ('periodicSync' in registration) return registration.periodicSync.unregister('nclex-hourly-motivation');
+        return undefined;
+      }).catch(() => {});
+    }
+    updateNotificationButton();
+    premiumHaptic('close');
+    showToast('Hourly motivation is off.');
+  }
+
+  function maybeShowNotificationPrompt() {
+    if (!('Notification' in window) || Notification.permission === 'denied' || notificationIsEnabled()) return;
+    let dismissedAt = 0;
+    try { dismissedAt = Number(localStorage.getItem('nclex:notification:dismissed:v1') || 0); } catch (_error) { /* ignored */ }
+    if (Date.now() - dismissedAt < 7 * 24 * 60 * 60 * 1000) return;
+    window.setTimeout(() => { notificationPrompt.hidden = false; }, 900);
   }
 
   function categoryRail(activeCategoryId) {
@@ -630,7 +961,7 @@
       <section class="watch-page">
         <div class="watch-layout">
           <div class="watch-main">
-            <div class="player-shell"><video id="player" controls playsinline preload="metadata" poster="${esc(safeUrl(video.thumbnail))}"></video></div>
+            <div class="watch-player-mount" id="watchPlayerMount" aria-label="Video player"></div>
             <h1 class="watch-title">${esc(video.title)}</h1>
             <div class="watch-toolbar">
               <div class="channel-line">
@@ -702,18 +1033,39 @@
       </section>`;
   }
 
-  function cleanupPlayer() {
-    if (hlsInstance) {
-      hlsInstance.destroy();
-      hlsInstance = null;
-    }
-  }
-
   function setupPlayer(streamUrl, videoId, nextVideoId) {
-    const player = $('#player');
-    if (!player) return;
-    cleanupPlayer();
+    const video = videos[videoId];
+    if (!player || !video) return;
+
+    const wasPlaying = Boolean(playerState && !player.paused && !player.ended);
+    if (playerState && playerState.videoId !== videoId && player.currentTime > 0) {
+      saveProgress(playerState.videoId, player.currentTime, true);
+    }
+
+    destroyHls();
+    player.pause();
+    player.onloadedmetadata = null;
+    player.ontimeupdate = null;
+    player.onpause = null;
+    player.onended = null;
+    player.onerror = null;
+    player.removeAttribute('src');
+    try { player.load(); } catch (_error) { /* ignored */ }
+
     const url = String(streamUrl || '').trim();
+    playerState = {
+      videoId,
+      nextVideoId: nextVideoId || '',
+      title: video.title,
+      playlistTitle: video.playlistTitle,
+      categoryTitle: video.categoryTitle,
+      streamUrl: url
+    };
+    player.poster = safeUrl(video.thumbnail);
+    persistentPlayer.hidden = false;
+    updateMiniPlayerCopy();
+    updateProgressVisuals(videoId, getProgress(videoId));
+
     if (!url) {
       showToast('No playback URL is available for this video.');
       return;
@@ -721,19 +1073,35 @@
 
     const saved = getProgress(videoId);
     const restoreTime = () => {
-      if (saved > 8 && Number.isFinite(saved)) {
+      const duration = Number.isFinite(player.duration) && player.duration > 0 ? player.duration : Number(video.durationSeconds || 0);
+      if (saved > 1 && Number.isFinite(saved) && (!duration || saved < duration - 2)) {
         try { player.currentTime = saved; } catch (_error) { /* ignored */ }
       }
+      updateProgressVisuals(videoId, saved);
+      if (wasPlaying) player.play().catch(() => {});
     };
+
+    player.onloadedmetadata = restoreTime;
+    player.ontimeupdate = () => {
+      if (!playerState || playerState.videoId !== videoId || player.currentTime < 0) return;
+      saveProgress(videoId, player.currentTime, false);
+    };
+    player.onpause = () => {
+      if (playerState && playerState.videoId === videoId && player.currentTime > 0) saveProgress(videoId, player.currentTime, true);
+    };
+    player.onended = () => {
+      saveProgress(videoId, player.duration || video.durationSeconds || player.currentTime, true);
+      premiumHaptic('success');
+      if (playerState && playerState.nextVideoId) navigate('watch', playerState.nextVideoId);
+    };
+    player.onerror = () => showToast('Playback is unavailable or blocked for this video.');
 
     if (player.canPlayType('application/vnd.apple.mpegurl')) {
       player.src = url;
-      player.addEventListener('loadedmetadata', restoreTime, { once: true });
     } else if (window.Hls && window.Hls.isSupported()) {
       hlsInstance = new window.Hls({ maxBufferLength: 45, enableWorker: true });
       hlsInstance.loadSource(url);
       hlsInstance.attachMedia(player);
-      hlsInstance.on(window.Hls.Events.MANIFEST_PARSED, restoreTime);
       hlsInstance.on(window.Hls.Events.ERROR, function (_event, data) {
         if (data && data.fatal) showToast('Playback is unavailable or blocked for this video.');
       });
@@ -741,10 +1109,8 @@
       showToast('This browser does not support HLS playback.');
     }
 
-    player.addEventListener('timeupdate', () => {
-      if (activeVideoId === videoId && player.currentTime > 1) saveProgress(videoId, player.currentTime);
-    });
-    if (nextVideoId) player.addEventListener('ended', () => navigate('watch', nextVideoId), { once: true });
+    dockPlayerInWatchPage();
+    observeWatchPlayerMount();
   }
 
   function activeFolderForRoute(route) {
@@ -773,7 +1139,7 @@
 
   function render() {
     const route = parseRoute();
-    if (route.kind !== 'watch') cleanupPlayer();
+    preparePlayerForRender(route);
     renderSidebar(route, activeFolderForRoute(route));
 
     if (route.kind === 'folder') renderFolder(route.id);
@@ -828,7 +1194,9 @@
   $('#mobileSearchButton').innerHTML = icon('search');
   $('#searchBack').innerHTML = icon('back');
   $('#clearSearch').innerHTML = icon('close');
+  $('#miniPlayerClose').innerHTML = icon('close');
   document.querySelectorAll('[data-icon]').forEach(element => { element.innerHTML = icon(element.dataset.icon); });
+  updateNotificationButton();
 
   $('#menuButton').addEventListener('click', function () {
     if (window.matchMedia('(max-width: 980px)').matches) openMobileNav();
@@ -846,6 +1214,34 @@
     updateSearchState();
     searchInput.focus();
     if (parseRoute().kind === 'search') navigate('search', '');
+  });
+
+
+  $('#miniPlayerClose').addEventListener('click', closePersistentPlayer);
+  $('#miniPlayerExpand').addEventListener('click', function () {
+    if (!playerState) return;
+    premiumHaptic('select');
+    const route = parseRoute();
+    if (route.kind === 'watch' && route.id === playerState.videoId) {
+      dockPlayerInWatchPage();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      observeWatchPlayerMount();
+    } else navigate('watch', playerState.videoId);
+  });
+
+  notificationButton.addEventListener('click', function () {
+    if (notificationIsEnabled()) disableNotifications();
+    else {
+      premiumHaptic('select');
+      notificationPrompt.hidden = false;
+    }
+  });
+
+  $('#notificationEnable').addEventListener('click', enableNotifications);
+  $('#notificationLater').addEventListener('click', function () {
+    notificationPrompt.hidden = true;
+    try { localStorage.setItem('nclex:notification:dismissed:v1', String(Date.now())); } catch (_error) { /* ignored */ }
+    premiumHaptic('close');
   });
 
   $('#themeToggle').addEventListener('click', function () {
@@ -898,6 +1294,43 @@
     }
   });
 
+  document.addEventListener('pointerdown', function (event) {
+    if (event.button != null && event.button !== 0) return;
+    const target = event.target.closest('button, a, [role="button"], input[type="checkbox"], input[type="radio"]');
+    if (!target || target.disabled) return;
+    premiumHaptic(target.matches('.button.primary, .video-card a, .video-row, .playlist-card a') ? 'select' : 'tap');
+  }, { passive: true });
+
+  document.addEventListener('scroll', function (event) {
+    if (!window.matchMedia('(pointer: coarse)').matches) return;
+    const now = performance.now();
+    if (now - lastScrollHapticAt < 130) return;
+    const target = event.target;
+    const position = target === document ? window.scrollY : Number(target.scrollTop || 0) + Number(target.scrollLeft || 0);
+    if (Math.abs(position - lastScrollHapticY) < 170) return;
+    lastScrollHapticY = position;
+    lastScrollHapticAt = now;
+    premiumHaptic('scroll');
+  }, { passive: true, capture: true });
+
+  player.addEventListener('play', () => premiumHaptic('select'));
+  player.addEventListener('pause', () => {
+    if (!player.ended) premiumHaptic('feather');
+  });
+  player.addEventListener('seeking', () => premiumHaptic('feather'));
+
+  window.addEventListener('pagehide', function () {
+    if (playerState && player.currentTime > 0) saveProgress(playerState.videoId, player.currentTime, true);
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+      if (playerState && player.currentTime > 0) saveProgress(playerState.videoId, player.currentTime, true);
+    } else if (notificationIsEnabled()) {
+      showMotivationNotification(false);
+      scheduleHourlyMotivation();
+    }
+  });
+
   window.addEventListener('scroll', () => topbar.classList.toggle('scrolled', window.scrollY > 6), { passive: true });
   window.addEventListener('hashchange', render);
   window.addEventListener('resize', function () {
@@ -912,10 +1345,20 @@
 
   updateThemeButton();
   updateSearchState();
+  installContentProtection();
   if (!location.hash) location.hash = '#home';
   render();
 
+  maybeShowNotificationPrompt();
+
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
-    navigator.serviceWorker.register('service-worker.js').catch(() => {});
+    navigator.serviceWorker.register('service-worker.js').then(async () => {
+      updateNotificationButton();
+      if (notificationIsEnabled()) {
+        await registerPeriodicMotivation();
+        await showMotivationNotification(false);
+        scheduleHourlyMotivation();
+      }
+    }).catch(() => {});
   }
 })();

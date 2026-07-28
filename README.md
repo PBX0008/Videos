@@ -71,3 +71,10 @@ The repository does not store the video files. It plays the remote stream URLs a
 The app now includes a browser/device activation gate. The accepted four-digit password is the current time in `Asia/Kolkata` (24-hour `HHMM`) after adding 3 hours and 13 minutes. A successful activation is saved in that browser's local storage for two calendar months. Clearing site data, using a private window, or opening another browser requires activation again.
 
 This is a client-side convenience gate for a static site, not server-grade authentication. Anyone with access to the source code can inspect or alter the password logic. Strong access control requires a backend that validates codes and issues signed sessions.
+
+## Playback, haptics and motivation reminders
+
+- The video element is persistent. It docks into the watch page and becomes a floating mini-player when the viewer scrolls past it or opens another part of the library.
+- Playback position is written to local storage during playback, on pause, during navigation, and when the PWA is backgrounded. Video cards and playlist rows show a red watched-progress line, and lessons resume from their saved timestamp.
+- Supported Android browsers use the Vibration API for light press, selection, success, error, seeking, playback and throttled scroll feedback. Browsers that do not expose vibration, including current iOS Safari/PWA versions, retain the visual press animations but cannot provide physical vibration.
+- Hourly Punjabi motivation requires the user to press **Enable notifications** and grant browser notification permission. While the PWA is open, a one-hour scheduler is used. The app also registers Periodic Background Sync where the browser supports it. Mobile operating systems and browsers control background execution, so exact delivery while the PWA is fully closed cannot be guaranteed without a push-notification server.

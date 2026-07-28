@@ -1,16 +1,42 @@
 {
+  "id": "./index.html",
   "name": "NCLEX Play",
   "short_name": "NCLEX Play",
-  "start_url": "./index.html",
+  "description": "A premium NCLEX video learning library with progress, mini-player and Punjabi motivation reminders.",
+  "start_url": "./index.html#home",
+  "scope": "./",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
   "background_color": "#0f0f0f",
   "theme_color": "#0f0f0f",
+  "categories": ["education", "medical"],
   "icons": [
     {
-      "src": "assets/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Continue watching",
+      "short_name": "Continue",
+      "url": "./index.html#home",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Open library",
+      "short_name": "Library",
+      "url": "./index.html#library",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

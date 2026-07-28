@@ -1224,3 +1224,295 @@ body.light .hero-banner p { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* Premium tactile interactions, persistent video and hourly motivation */
+.notification-button { position: relative; }
+.notification-button.enabled::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 7px;
+  height: 7px;
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.progress-track {
+  height: 4px;
+  background: rgba(255,255,255,.34);
+}
+.progress-fill {
+  display: block;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 8px rgba(255,0,51,.42);
+  transition: width .35s linear;
+}
+
+.watch-player-mount {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #000;
+  box-shadow: 0 18px 55px rgba(0,0,0,.28);
+}
+
+.persistent-player[hidden] { display: none !important; }
+.persistent-player { z-index: 170; }
+.persistent-player-frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #000;
+}
+.persistent-player video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #000;
+}
+.persistent-player.is-docked {
+  position: static;
+  width: 100%;
+  height: auto;
+}
+.persistent-player.is-docked .persistent-player-frame {
+  border-radius: 14px;
+}
+.persistent-player.is-docked .mini-player-bar { display: none; }
+
+.persistent-player.is-mini {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: min(420px, calc(100vw - 36px));
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,.52));
+  animation: mini-player-arrive .3s cubic-bezier(.2,.8,.2,1) both;
+}
+.persistent-player.is-mini .persistent-player-frame {
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+}
+.mini-player-bar {
+  display: flex;
+  align-items: stretch;
+  min-height: 48px;
+  background: color-mix(in srgb, #111 92%, transparent);
+  color: #fff;
+  backdrop-filter: blur(18px) saturate(130%);
+}
+.mini-player-expand {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 7px 12px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.mini-player-copy {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+.mini-player-copy strong,
+.mini-player-copy small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mini-player-copy strong { font-size: 12px; font-weight: 800; }
+.mini-player-copy small { color: #aaa; font-size: 10px; }
+.mini-player-action {
+  width: 48px;
+  flex: 0 0 48px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+.mini-player-action:hover,
+.mini-player-expand:hover { background: rgba(255,255,255,.08); }
+.mini-player-action svg { width: 20px; height: 20px; fill: currentColor; }
+.live-progress-track {
+  position: absolute;
+  z-index: 8;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  overflow: hidden;
+  pointer-events: none;
+  background: rgba(255,255,255,.2);
+}
+.live-progress-track span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(255,0,51,.58);
+  transition: width .25s linear;
+}
+@keyframes mini-player-arrive {
+  from { opacity: 0; transform: translateY(18px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.notification-prompt[hidden] { display: none !important; }
+.notification-prompt {
+  position: fixed;
+  z-index: 230;
+  left: max(18px, env(safe-area-inset-left));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  width: min(530px, calc(100vw - 36px));
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  box-shadow: 0 28px 80px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.07);
+  backdrop-filter: blur(24px) saturate(140%);
+  animation: notification-prompt-arrive .32s cubic-bezier(.2,.8,.2,1) both;
+}
+.notification-prompt-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(255,0,51,.25), rgba(255,0,51,.08));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+}
+.notification-prompt-icon::before {
+  content: "🔔";
+  font-size: 27px;
+  filter: saturate(.9);
+}
+.notification-prompt-copy { min-width: 0; }
+.notification-prompt-copy p {
+  margin: 2px 0 5px;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+.notification-prompt-copy h2 {
+  margin: 0 0 6px;
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: -.25px;
+}
+.notification-prompt-copy span {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+.notification-prompt-actions {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+.notification-prompt-actions .button { min-height: 38px; }
+@keyframes notification-prompt-arrive {
+  from { opacity: 0; transform: translateY(18px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (hover: none), (pointer: coarse) {
+  button:active,
+  a:active,
+  [role="button"]:active {
+    transform: scale(.975);
+    transition-duration: .06s !important;
+  }
+  .video-card:active .thumb,
+  .playlist-card:active .thumb,
+  .video-row:active { filter: brightness(.88); }
+}
+
+@media (max-width: 720px) {
+  .watch-player-mount { border-radius: 0; }
+  .persistent-player.is-docked .persistent-player-frame { border-radius: 0; }
+  .persistent-player.is-mini {
+    right: 8px;
+    bottom: calc(66px + var(--safe-bottom));
+    width: min(390px, calc(100vw - 16px));
+  }
+  .persistent-player.is-mini .persistent-player-frame { border-radius: 13px; }
+  .mini-player-bar { min-height: 43px; }
+  .mini-player-action { width: 44px; flex-basis: 44px; }
+  .notification-prompt {
+    right: 10px;
+    bottom: calc(68px + var(--safe-bottom));
+    left: 10px;
+    width: auto;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 11px;
+    padding: 14px;
+    border-radius: 17px;
+  }
+  .notification-prompt-icon { width: 48px; height: 48px; border-radius: 15px; }
+  .notification-prompt-icon::before { font-size: 23px; }
+  .notification-prompt-copy h2 { font-size: 15px; }
+  .notification-prompt-actions { grid-column: 1 / -1; }
+  .notification-prompt-actions .button { flex: 1 1 auto; }
+}
+
+@media (max-width: 430px) {
+  .persistent-player.is-mini { width: calc(100vw - 12px); right: 6px; }
+  .mini-player-copy strong { font-size: 11px; }
+  .mini-player-copy small { font-size: 9px; }
+}
+
+
+/* Content protection: deter selection, copying, dragging and printing. */
+html,
+body,
+body * {
+  -webkit-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+
+input,
+textarea {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
+img,
+video,
+a {
+  -webkit-user-drag: none !important;
+  user-drag: none !important;
+}
+
+@media print {
+  body > * { display: none !important; }
+  body::before {
+    content: "Printing and copying are disabled in NCLEX Play.";
+    display: grid !important;
+    min-height: 100vh;
+    place-items: center;
+    padding: 40px;
+    color: #000;
+    background: #fff;
+    font: 700 20px/1.5 Arial, sans-serif;
+    text-align: center;
+  }
+}
