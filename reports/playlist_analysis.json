@@ -1,0 +1,171 @@
+{
+  "summary": {
+    "mainCategories": 14,
+    "foldersAndCategories": 53,
+    "nestedFoldersOnly": 39,
+    "playlists": 356,
+    "playlistVideoEntries": 1519,
+    "uniqueNativeVideoIds": 1270,
+    "videosMissingThumbnail": 0,
+    "videosMissingStream": 0,
+    "totalSeconds": 646829,
+    "generatedAt": "2026-06-28T12:12:03.745631+00:00",
+    "totalDurationText": "179h 40m"
+  },
+  "categories": [
+    {
+      "id": "cat-med-math",
+      "title": "Med Math",
+      "slug": "med-math",
+      "declaredVideos": 83,
+      "videoCount": 83,
+      "playlistCount": 6,
+      "folderCount": 1,
+      "durationText": "2h 6m",
+      "totalSeconds": 7563
+    },
+    {
+      "id": "cat-pathophysiology",
+      "title": "Pathophysiology",
+      "slug": "pathophysiology",
+      "declaredVideos": 178,
+      "videoCount": 178,
+      "playlistCount": 21,
+      "folderCount": 2,
+      "durationText": "26h",
+      "totalSeconds": 93621
+    },
+    {
+      "id": "cat-fundamentals",
+      "title": "Fundamentals",
+      "slug": "fundamentals",
+      "declaredVideos": 99,
+      "videoCount": 99,
+      "playlistCount": 22,
+      "folderCount": 1,
+      "durationText": "16h 35m",
+      "totalSeconds": 59720
+    },
+    {
+      "id": "cat-health-assessment",
+      "title": "Health Assessment",
+      "slug": "health-assessment",
+      "declaredVideos": 99,
+      "videoCount": 99,
+      "playlistCount": 10,
+      "folderCount": 0,
+      "durationText": "23h 1m",
+      "totalSeconds": 82915
+    },
+    {
+      "id": "cat-medical-surgical",
+      "title": "Medical / Surgical",
+      "slug": "medical-surgical",
+      "declaredVideos": 384,
+      "videoCount": 383,
+      "playlistCount": 136,
+      "folderCount": 16,
+      "durationText": "46h 1m",
+      "totalSeconds": 165715
+    },
+    {
+      "id": "cat-maternity-mother-and-baby",
+      "title": "Maternity - Mother & Baby",
+      "slug": "maternity-mother-and-baby",
+      "declaredVideos": 97,
+      "videoCount": 97,
+      "playlistCount": 21,
+      "folderCount": 3,
+      "durationText": "10h 38m",
+      "totalSeconds": 38339
+    },
+    {
+      "id": "cat-pediatrics",
+      "title": "Pediatrics",
+      "slug": "pediatrics",
+      "declaredVideos": 139,
+      "videoCount": 139,
+      "playlistCount": 39,
+      "folderCount": 5,
+      "durationText": "15h 34m",
+      "totalSeconds": 56047
+    },
+    {
+      "id": "cat-pharmacology",
+      "title": "Pharmacology",
+      "slug": "pharmacology",
+      "declaredVideos": 242,
+      "videoCount": 242,
+      "playlistCount": 42,
+      "folderCount": 9,
+      "durationText": "18h 46m",
+      "totalSeconds": 67602
+    },
+    {
+      "id": "cat-critical-care",
+      "title": "Critical Care",
+      "slug": "critical-care",
+      "declaredVideos": 50,
+      "videoCount": 50,
+      "playlistCount": 12,
+      "folderCount": 1,
+      "durationText": "5h 39m",
+      "totalSeconds": 20386
+    },
+    {
+      "id": "cat-mental-health",
+      "title": "Mental Health",
+      "slug": "mental-health",
+      "declaredVideos": 71,
+      "videoCount": 71,
+      "playlistCount": 24,
+      "folderCount": 1,
+      "durationText": "8h 53m",
+      "totalSeconds": 32017
+    },
+    {
+      "id": "cat-clinical-skills-and-more",
+      "title": "Clinical Skills & More",
+      "slug": "clinical-skills-and-more",
+      "declaredVideos": 47,
+      "videoCount": 47,
+      "playlistCount": 20,
+      "folderCount": 0,
+      "durationText": "3h 44m",
+      "totalSeconds": 13449
+    },
+    {
+      "id": "cat-nurse-mike-s-memory-music",
+      "title": "Nurse Mike's Memory Music",
+      "slug": "nurse-mike-s-memory-music",
+      "declaredVideos": 24,
+      "videoCount": 19,
+      "playlistCount": 1,
+      "folderCount": 0,
+      "durationText": "1h 3m",
+      "totalSeconds": 3792
+    },
+    {
+      "id": "cat-new-grad-support",
+      "title": "New Grad Support",
+      "slug": "new-grad-support",
+      "declaredVideos": 3,
+      "videoCount": 3,
+      "playlistCount": 1,
+      "folderCount": 0,
+      "durationText": "25m 59s",
+      "totalSeconds": 1559
+    },
+    {
+      "id": "cat-mini-lesson-series",
+      "title": "Mini Lesson Series",
+      "slug": "mini-lesson-series",
+      "declaredVideos": 9,
+      "videoCount": 9,
+      "playlistCount": 1,
+      "folderCount": 0,
+      "durationText": "1h 8m",
+      "totalSeconds": 4104
+    }
+  ]
+}

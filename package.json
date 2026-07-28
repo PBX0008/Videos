@@ -1,0 +1,14 @@
+{
+  "name": "nclex-play",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Premium YouTube-inspired responsive NCLEX video learning library",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "serve:python": "python3 -m http.server 8080",
+    "rebuild:data": "python3 scripts/normalize_playlists.py"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  }
+}

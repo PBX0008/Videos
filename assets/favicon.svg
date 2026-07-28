@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 84" role="img" aria-label="NCLEX Play logo">
+  <defs>
+    <linearGradient id="r" x1="12" y1="8" x2="108" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff1744"/>
+      <stop offset="1" stop-color="#d50000"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#b00020" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect x="5" y="10" width="110" height="64" rx="20" fill="url(#r)" filter="url(#s)"/>
+  <path d="M51 28.5 79 42 51 55.5v-27z" fill="#fff"/>
+</svg>
