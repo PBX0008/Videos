@@ -9,6 +9,8 @@
   const NOTIFICATION_STORAGE_KEY = 'nclex:notifications:v1';
   const NOTIFICATION_LAST_KEY = 'nclex:notification:last:v1';
   const NOTIFICATION_INDEX_KEY = 'nclex:notification:index:v1';
+  const MINI_LAYOUT_STORAGE_KEY = 'nclex:mini-player-layout:v3';
+  const PIP_PREFERENCE_STORAGE_KEY = 'nclex:picture-in-picture:v1';
 
   function premiumHaptic(kind) {
     if (!('vibrate' in navigator)) return false;
@@ -17,7 +19,11 @@
     } catch (_error) { /* use default */ }
     const patterns = {
       feather: 3,
-      scroll: 4,
+      scroll: 3,
+      scrollSlow: 2,
+      scrollMedium: [3, 8, 3],
+      scrollFast: [4, 6, 4, 6, 5],
+      scrollFlick: [6, 5, 6, 5, 8],
       tap: 8,
       select: [8, 18, 5],
       success: [12, 24, 18],
@@ -202,6 +208,9 @@
   let progressWriteAt = 0;
   let lastScrollHapticAt = 0;
   let lastScrollHapticY = 0;
+  let lastScrollSampleAt = performance.now();
+  let miniUiTimer = null;
+  let miniPointerSession = null;
 
   const ICONS = {
     menu: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16v1.5H4V6.5Zm0 5h16V13H4v-1.5Zm0 5h16V18H4v-1.5Z"/></svg>',
@@ -213,6 +222,8 @@
     folder: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h7l2 2h9v11H3v-13Zm1.5 1.5v10h15V9h-8.1l-2-2H4.5Z"/></svg>',
     history: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a8 8 0 1 1-7.6 5.5L2 9.5 5.4 6l3.4 3.5H6A6.5 6.5 0 1 0 12 5.5V4Zm-.8 3.5h1.6v4.1l3 1.8-.8 1.3-3.8-2.3V7.5Z"/></svg>',
     play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7V5Z"/></svg>',
+    pause: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7V5Zm6 0h4v14h-4V5Z"/></svg>',
+    pip: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3V5Zm1.6 1.6v10.8h14.8V6.6H4.6Zm7.4 4.1h6v4.7h-6v-4.7Z"/></svg>',
     playlist: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h11v1.5H4V5Zm0 4h11v1.5H4V9Zm0 4h7v1.5H4V13Zm12 0 5 3-5 3v-6Z"/></svg>',
     more: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2Zm0 6.4a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2Zm0 6.4a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2Z"/></svg>',
     chevron: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5.9 6.1 6.1L9 18.1l1.1 1.1 7.2-7.2-7.2-7.2L9 5.9Z"/></svg>',
@@ -243,6 +254,13 @@
   const persistentPlayer = $('#persistentPlayer');
   const player = $('#player');
   const liveProgressFill = $('#liveProgressFill');
+  const miniPlayerFrame = $('#persistentPlayerFrame');
+  const miniPlayerControls = $('#miniPlayerControls');
+  const miniPlayerDrag = $('#miniPlayerDrag');
+  const miniPlayerPlay = $('#miniPlayerPlay');
+  const miniPlayerPip = $('#miniPlayerPip');
+  const miniPlayerExpand = $('#miniPlayerExpand');
+  const miniPlayerClose = $('#miniPlayerClose');
   const notificationPrompt = $('#notificationPrompt');
   const notificationButton = $('#notificationButton');
 
@@ -350,8 +368,12 @@
       if (element.matches('img, video, a')) element.setAttribute('draggable', 'false');
       if (element.matches('video')) {
         element.setAttribute('controlsList', 'nodownload noremoteplayback');
-        element.setAttribute('disablePictureInPicture', '');
-        try { element.disablePictureInPicture = true; } catch (_error) { /* unsupported */ }
+        element.removeAttribute('disablePictureInPicture');
+        element.setAttribute('autopictureinpicture', '');
+        try {
+          element.disablePictureInPicture = false;
+          element.autoPictureInPicture = true;
+        } catch (_error) { /* unsupported */ }
       }
       element.querySelectorAll && element.querySelectorAll('img, video, a').forEach(hardenElement);
     };
@@ -471,6 +493,106 @@
     if (subtitle) subtitle.textContent = playerState.playlistTitle || playerState.categoryTitle || 'NCLEX Play';
   }
 
+  function miniPlayerBounds() {
+    const margin = window.innerWidth <= 520 ? 6 : 12;
+    const topInset = window.innerWidth <= 720 ? 66 : 76;
+    const bottomInset = window.innerWidth <= 720 ? 76 : 12;
+    const minWidth = window.innerWidth <= 520 ? 190 : 230;
+    const maxWidth = Math.max(minWidth, Math.min(640, window.innerWidth - margin * 2));
+    return { margin, topInset, bottomInset, minWidth, maxWidth };
+  }
+
+  function defaultMiniPlayerRect() {
+    const bounds = miniPlayerBounds();
+    const width = Math.min(window.innerWidth <= 520 ? 232 : 320, bounds.maxWidth);
+    const height = width * 9 / 16;
+    return {
+      left: window.innerWidth - width - bounds.margin,
+      top: Math.min(Math.max(bounds.topInset, 88), window.innerHeight - height - bounds.bottomInset),
+      width
+    };
+  }
+
+  function readMiniPlayerLayout() {
+    try { return JSON.parse(localStorage.getItem(MINI_LAYOUT_STORAGE_KEY) || 'null'); }
+    catch (_error) { return null; }
+  }
+
+  function clampMiniPlayerRect(rect) {
+    const bounds = miniPlayerBounds();
+    const width = Math.min(bounds.maxWidth, Math.max(bounds.minWidth, Number(rect && rect.width) || defaultMiniPlayerRect().width));
+    const height = width * 9 / 16;
+    const maxLeft = Math.max(bounds.margin, window.innerWidth - width - bounds.margin);
+    const maxTop = Math.max(bounds.topInset, window.innerHeight - height - bounds.bottomInset);
+    return {
+      width,
+      left: Math.min(maxLeft, Math.max(bounds.margin, Number(rect && rect.left) || bounds.margin)),
+      top: Math.min(maxTop, Math.max(bounds.topInset, Number(rect && rect.top) || bounds.topInset))
+    };
+  }
+
+  function applyMiniPlayerRect(rect, persist) {
+    if (!persistentPlayer) return;
+    const safe = clampMiniPlayerRect(rect);
+    persistentPlayer.style.left = `${safe.left}px`;
+    persistentPlayer.style.top = `${safe.top}px`;
+    persistentPlayer.style.width = `${safe.width}px`;
+    persistentPlayer.style.right = 'auto';
+    persistentPlayer.style.bottom = 'auto';
+    if (persist) {
+      try { localStorage.setItem(MINI_LAYOUT_STORAGE_KEY, JSON.stringify(safe)); }
+      catch (_error) { /* ignored */ }
+    }
+  }
+
+  function restoreMiniPlayerLayout() {
+    applyMiniPlayerRect(readMiniPlayerLayout() || defaultMiniPlayerRect(), false);
+  }
+
+  function clearMiniUiTimer() {
+    if (miniUiTimer) window.clearTimeout(miniUiTimer);
+    miniUiTimer = null;
+  }
+
+  function updateMiniPlayerPlayButton() {
+    if (!miniPlayerPlay) return;
+    miniPlayerPlay.innerHTML = player.paused ? icon('play') : icon('pause');
+    miniPlayerPlay.setAttribute('aria-label', player.paused ? 'Play video' : 'Pause video');
+  }
+
+  function pictureInPictureIsActive() {
+    return document.pictureInPictureElement === player || player.webkitPresentationMode === 'picture-in-picture';
+  }
+
+  function pictureInPictureIsSupported() {
+    return Boolean(
+      (document.pictureInPictureEnabled && typeof player.requestPictureInPicture === 'function') ||
+      (typeof player.webkitSetPresentationMode === 'function' && player.webkitSupportsPresentationMode && player.webkitSupportsPresentationMode('picture-in-picture'))
+    );
+  }
+
+  function updatePictureInPictureButton() {
+    if (!miniPlayerPip) return;
+    const active = pictureInPictureIsActive();
+    miniPlayerPip.hidden = !pictureInPictureIsSupported();
+    miniPlayerPip.classList.toggle('active', active);
+    miniPlayerPip.setAttribute('aria-label', active ? 'Close outside-app player' : 'Play outside the app');
+  }
+
+  function showMiniPlayerUi(keepVisible) {
+    if (!persistentPlayer || !persistentPlayer.classList.contains('is-mini')) return;
+    clearMiniUiTimer();
+    persistentPlayer.classList.add('mini-ui-visible');
+    if (keepVisible || miniPointerSession) return;
+    miniUiTimer = window.setTimeout(() => {
+      if (!miniPointerSession && persistentPlayer.classList.contains('is-mini')) persistentPlayer.classList.remove('mini-ui-visible');
+    }, player.paused ? 3600 : 2300);
+  }
+
+  function hideMiniPlayerUiSoon() {
+    showMiniPlayerUi(false);
+  }
+
   function activateMiniPlayer() {
     if (!playerState || !persistentPlayer) return;
     if (persistentPlayer.parentElement !== document.body) document.body.appendChild(persistentPlayer);
@@ -479,17 +601,25 @@
     persistentPlayer.classList.add('is-mini');
     document.body.classList.add('mini-player-visible');
     updateMiniPlayerCopy();
+    updateMiniPlayerPlayButton();
+    updatePictureInPictureButton();
+    restoreMiniPlayerLayout();
+    showMiniPlayerUi(false);
   }
 
   function dockPlayerInWatchPage() {
     const mount = $('#watchPlayerMount');
     if (!mount || !playerState || !persistentPlayer) return;
+    clearMiniUiTimer();
     persistentPlayer.hidden = false;
-    persistentPlayer.classList.remove('is-mini');
+    persistentPlayer.classList.remove('is-mini', 'mini-ui-visible', 'is-interacting');
     persistentPlayer.classList.add('is-docked');
+    persistentPlayer.removeAttribute('style');
     document.body.classList.remove('mini-player-visible');
     mount.appendChild(persistentPlayer);
     updateMiniPlayerCopy();
+    updateMiniPlayerPlayButton();
+    updatePictureInPictureButton();
   }
 
   function observeWatchPlayerMount() {
@@ -506,10 +636,65 @@
     playerMountObserver.observe(mount);
   }
 
+  async function togglePictureInPicture() {
+    if (!playerState || !player) return;
+    premiumHaptic('select');
+    try {
+      if (document.pictureInPictureElement === player) {
+        await document.exitPictureInPicture();
+      } else if (player.webkitPresentationMode === 'picture-in-picture' && typeof player.webkitSetPresentationMode === 'function') {
+        player.webkitSetPresentationMode('inline');
+      } else if (document.pictureInPictureEnabled && typeof player.requestPictureInPicture === 'function') {
+        try { localStorage.setItem(PIP_PREFERENCE_STORAGE_KEY, 'on'); } catch (_error) { /* ignored */ }
+        await player.requestPictureInPicture();
+      } else if (typeof player.webkitSetPresentationMode === 'function' && player.webkitSupportsPresentationMode && player.webkitSupportsPresentationMode('picture-in-picture')) {
+        try { localStorage.setItem(PIP_PREFERENCE_STORAGE_KEY, 'on'); } catch (_error) { /* ignored */ }
+        player.webkitSetPresentationMode('picture-in-picture');
+      } else {
+        showToast('Outside-app video is not supported by this browser.');
+      }
+    } catch (_error) {
+      showToast('Tap the outside-app button while the video is playing.');
+    }
+    updatePictureInPictureButton();
+  }
+
+  function updateMediaSession() {
+    if (!playerState || !('mediaSession' in navigator)) return;
+    const video = videos[playerState.videoId] || {};
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: playerState.title || 'NCLEX Play',
+        artist: playerState.playlistTitle || playerState.categoryTitle || 'NCLEX Play',
+        album: playerState.categoryTitle || 'NCLEX Play',
+        artwork: video.thumbnail ? [
+          { src: safeUrl(video.thumbnail), sizes: '512x288', type: 'image/jpeg' }
+        ] : []
+      });
+    } catch (_error) { /* metadata is optional */ }
+  }
+
+  function updateMediaPositionState() {
+    if (!('mediaSession' in navigator) || typeof navigator.mediaSession.setPositionState !== 'function') return;
+    if (!Number.isFinite(player.duration) || player.duration <= 0 || !Number.isFinite(player.currentTime)) return;
+    try {
+      navigator.mediaSession.setPositionState({
+        duration: player.duration,
+        playbackRate: player.playbackRate || 1,
+        position: Math.min(player.duration, Math.max(0, player.currentTime))
+      });
+    } catch (_error) { /* unsupported state */ }
+  }
+
   function closePersistentPlayer() {
     if (playerState && player.currentTime > 0) saveProgress(playerState.videoId, player.currentTime, true);
     premiumHaptic('close');
+    clearMiniUiTimer();
     disconnectPlayerMountObserver();
+    if (document.pictureInPictureElement === player && document.exitPictureInPicture) document.exitPictureInPicture().catch(() => {});
+    if (player.webkitPresentationMode === 'picture-in-picture' && typeof player.webkitSetPresentationMode === 'function') {
+      try { player.webkitSetPresentationMode('inline'); } catch (_error) { /* unsupported */ }
+    }
     player.pause();
     destroyHls();
     player.removeAttribute('src');
@@ -518,9 +703,74 @@
     playerState = null;
     activeVideoId = null;
     persistentPlayer.hidden = true;
-    persistentPlayer.classList.remove('is-mini', 'is-docked');
+    persistentPlayer.classList.remove('is-mini', 'is-docked', 'mini-ui-visible', 'is-interacting');
+    persistentPlayer.removeAttribute('style');
     document.body.classList.remove('mini-player-visible');
     if (liveProgressFill) liveProgressFill.style.width = '0%';
+    if ('mediaSession' in navigator) navigator.mediaSession.metadata = null;
+  }
+
+  function beginMiniPointerInteraction(event, mode, edge) {
+    if (!persistentPlayer.classList.contains('is-mini') || event.button !== 0) return;
+    event.preventDefault();
+    event.stopPropagation();
+    const rect = persistentPlayer.getBoundingClientRect();
+    miniPointerSession = {
+      mode,
+      edge: edge || '',
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      left: rect.left,
+      top: rect.top,
+      width: rect.width,
+      right: rect.right,
+      bottom: rect.bottom
+    };
+    persistentPlayer.classList.add('is-interacting', 'mini-ui-visible');
+    clearMiniUiTimer();
+    try { event.currentTarget.setPointerCapture(event.pointerId); } catch (_error) { /* optional */ }
+    premiumHaptic('feather');
+  }
+
+  function moveMiniPointerInteraction(event) {
+    if (!miniPointerSession || event.pointerId !== miniPointerSession.pointerId) return;
+    event.preventDefault();
+    const dx = event.clientX - miniPointerSession.startX;
+    const dy = event.clientY - miniPointerSession.startY;
+    let next = {
+      left: miniPointerSession.left,
+      top: miniPointerSession.top,
+      width: miniPointerSession.width
+    };
+
+    if (miniPointerSession.mode === 'drag') {
+      next.left += dx;
+      next.top += dy;
+    } else {
+      const edge = miniPointerSession.edge;
+      let width = miniPointerSession.width;
+      if (edge.includes('e')) width = miniPointerSession.width + dx;
+      if (edge.includes('w')) width = miniPointerSession.width - dx;
+      if (edge.includes('s')) width = Math.max(width, miniPointerSession.width + dy * 16 / 9);
+      if (edge.includes('n')) width = Math.max(width, miniPointerSession.width - dy * 16 / 9);
+      const safeWidth = clampMiniPlayerRect({ width }).width;
+      next.width = safeWidth;
+      if (edge.includes('w')) next.left = miniPointerSession.right - safeWidth;
+      if (edge.includes('n')) next.top = miniPointerSession.bottom - safeWidth * 9 / 16;
+    }
+
+    applyMiniPlayerRect(next, false);
+  }
+
+  function endMiniPointerInteraction(event) {
+    if (!miniPointerSession || event.pointerId !== miniPointerSession.pointerId) return;
+    const rect = persistentPlayer.getBoundingClientRect();
+    miniPointerSession = null;
+    persistentPlayer.classList.remove('is-interacting');
+    applyMiniPlayerRect({ left: rect.left, top: rect.top, width: rect.width }, true);
+    premiumHaptic('tap');
+    hideMiniPlayerUiSoon();
   }
 
   function preparePlayerForRender(route) {
@@ -971,6 +1221,7 @@
               <div class="watch-actions">
                 ${previousId ? `<a class="button" href="${esc(routeHash('watch', previousId))}">${icon('previous')} Previous</a>` : ''}
                 ${nextId ? `<a class="button" href="${esc(routeHash('watch', nextId))}">Next ${icon('next')}</a>` : ''}
+                <button class="button" type="button" data-player-action="pip">${icon('pip')} Outside app</button>
                 <a class="button" href="${esc(routeHash('playlist', video.playlistId))}">${icon('playlist')} Playlist</a>
               </div>
             </div>
@@ -1062,7 +1313,10 @@
       streamUrl: url
     };
     player.poster = safeUrl(video.thumbnail);
+    player.setAttribute('autopictureinpicture', '');
+    try { player.autoPictureInPicture = true; } catch (_error) { /* unsupported */ }
     persistentPlayer.hidden = false;
+    updateMediaSession();
     updateMiniPlayerCopy();
     updateProgressVisuals(videoId, getProgress(videoId));
 
@@ -1078,6 +1332,7 @@
         try { player.currentTime = saved; } catch (_error) { /* ignored */ }
       }
       updateProgressVisuals(videoId, saved);
+      updateMediaPositionState();
       if (wasPlaying) player.play().catch(() => {});
     };
 
@@ -1085,6 +1340,7 @@
     player.ontimeupdate = () => {
       if (!playerState || playerState.videoId !== videoId || player.currentTime < 0) return;
       saveProgress(videoId, player.currentTime, false);
+      updateMediaPositionState();
     };
     player.onpause = () => {
       if (playerState && playerState.videoId === videoId && player.currentTime > 0) saveProgress(videoId, player.currentTime, true);
@@ -1194,7 +1450,11 @@
   $('#mobileSearchButton').innerHTML = icon('search');
   $('#searchBack').innerHTML = icon('back');
   $('#clearSearch').innerHTML = icon('close');
-  $('#miniPlayerClose').innerHTML = icon('close');
+  miniPlayerClose.innerHTML = icon('close');
+  miniPlayerExpand.innerHTML = icon('expand');
+  miniPlayerPip.innerHTML = icon('pip');
+  updateMiniPlayerPlayButton();
+  updatePictureInPictureButton();
   document.querySelectorAll('[data-icon]').forEach(element => { element.innerHTML = icon(element.dataset.icon); });
   updateNotificationButton();
 
@@ -1217,8 +1477,23 @@
   });
 
 
-  $('#miniPlayerClose').addEventListener('click', closePersistentPlayer);
-  $('#miniPlayerExpand').addEventListener('click', function () {
+  miniPlayerClose.addEventListener('click', function (event) {
+    event.stopPropagation();
+    closePersistentPlayer();
+  });
+  miniPlayerPlay.addEventListener('click', function (event) {
+    event.stopPropagation();
+    if (!playerState) return;
+    if (player.paused) player.play().catch(() => {}); else player.pause();
+    updateMiniPlayerPlayButton();
+    showMiniPlayerUi(false);
+  });
+  miniPlayerPip.addEventListener('click', function (event) {
+    event.stopPropagation();
+    togglePictureInPicture();
+  });
+  miniPlayerExpand.addEventListener('click', function (event) {
+    event.stopPropagation();
     if (!playerState) return;
     premiumHaptic('select');
     const route = parseRoute();
@@ -1227,6 +1502,28 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
       observeWatchPlayerMount();
     } else navigate('watch', playerState.videoId);
+  });
+
+  miniPlayerDrag.addEventListener('pointerdown', event => beginMiniPointerInteraction(event, 'drag'));
+  miniPlayerDrag.addEventListener('dblclick', function () {
+    applyMiniPlayerRect(defaultMiniPlayerRect(), true);
+    premiumHaptic('select');
+  });
+  persistentPlayer.querySelectorAll('[data-mini-resize]').forEach(handle => {
+    handle.addEventListener('pointerdown', event => beginMiniPointerInteraction(event, 'resize', handle.dataset.miniResize));
+  });
+  window.addEventListener('pointermove', moveMiniPointerInteraction, { passive: false });
+  window.addEventListener('pointerup', endMiniPointerInteraction);
+  window.addEventListener('pointercancel', endMiniPointerInteraction);
+  persistentPlayer.addEventListener('pointerdown', function (event) {
+    if (!persistentPlayer.classList.contains('is-mini')) return;
+    if (!event.target.closest('.mini-player-controls, [data-mini-resize]')) showMiniPlayerUi(false);
+  });
+  persistentPlayer.addEventListener('pointermove', function () {
+    if (persistentPlayer.classList.contains('is-mini') && window.matchMedia('(hover: hover)').matches) showMiniPlayerUi(false);
+  });
+  persistentPlayer.addEventListener('pointerleave', function () {
+    if (persistentPlayer.classList.contains('is-mini') && !miniPointerSession) hideMiniPlayerUiSoon();
   });
 
   notificationButton.addEventListener('click', function () {
@@ -1294,6 +1591,13 @@
     }
   });
 
+  document.addEventListener('click', function (event) {
+    const action = event.target.closest('[data-player-action="pip"]');
+    if (!action) return;
+    event.preventDefault();
+    togglePictureInPicture();
+  });
+
   document.addEventListener('pointerdown', function (event) {
     if (event.button != null && event.button !== 0) return;
     const target = event.target.closest('button, a, [role="button"], input[type="checkbox"], input[type="radio"]');
@@ -1304,20 +1608,63 @@
   document.addEventListener('scroll', function (event) {
     if (!window.matchMedia('(pointer: coarse)').matches) return;
     const now = performance.now();
-    if (now - lastScrollHapticAt < 130) return;
     const target = event.target;
-    const position = target === document ? window.scrollY : Number(target.scrollTop || 0) + Number(target.scrollLeft || 0);
-    if (Math.abs(position - lastScrollHapticY) < 170) return;
+    const position = target === document
+      ? window.scrollY
+      : Number(target.scrollTop || 0) + Number(target.scrollLeft || 0);
+    const elapsed = Math.max(12, now - lastScrollSampleAt);
+    const distance = Math.abs(position - lastScrollHapticY);
+    const velocity = distance / elapsed;
+    lastScrollSampleAt = now;
+
+    let interval = 155;
+    let minimumDistance = 135;
+    let pattern = 'scrollSlow';
+    if (velocity >= 0.7) { interval = 105; minimumDistance = 95; pattern = 'scrollMedium'; }
+    if (velocity >= 1.8) { interval = 68; minimumDistance = 62; pattern = 'scrollFast'; }
+    if (velocity >= 3.5) { interval = 42; minimumDistance = 38; pattern = 'scrollFlick'; }
+
+    if (distance < minimumDistance || now - lastScrollHapticAt < interval) return;
     lastScrollHapticY = position;
     lastScrollHapticAt = now;
-    premiumHaptic('scroll');
+    premiumHaptic(pattern);
   }, { passive: true, capture: true });
 
-  player.addEventListener('play', () => premiumHaptic('select'));
+  player.addEventListener('play', () => {
+    premiumHaptic('select');
+    updateMiniPlayerPlayButton();
+    if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'playing';
+    hideMiniPlayerUiSoon();
+  });
   player.addEventListener('pause', () => {
     if (!player.ended) premiumHaptic('feather');
+    updateMiniPlayerPlayButton();
+    if ('mediaSession' in navigator) navigator.mediaSession.playbackState = 'paused';
+    showMiniPlayerUi(false);
   });
   player.addEventListener('seeking', () => premiumHaptic('feather'));
+  player.addEventListener('enterpictureinpicture', () => {
+    updatePictureInPictureButton();
+    premiumHaptic('success');
+  });
+  player.addEventListener('leavepictureinpicture', () => updatePictureInPictureButton());
+  player.addEventListener('webkitpresentationmodechanged', () => updatePictureInPictureButton());
+
+  if ('mediaSession' in navigator) {
+    const setHandler = (action, handler) => {
+      try { navigator.mediaSession.setActionHandler(action, handler); } catch (_error) { /* unsupported action */ }
+    };
+    setHandler('play', () => player.play().catch(() => {}));
+    setHandler('pause', () => player.pause());
+    setHandler('seekbackward', details => { player.currentTime = Math.max(0, player.currentTime - (details.seekOffset || 10)); });
+    setHandler('seekforward', details => { player.currentTime = Math.min(player.duration || Infinity, player.currentTime + (details.seekOffset || 10)); });
+    setHandler('seekto', details => {
+      if (!Number.isFinite(details.seekTime)) return;
+      if (details.fastSeek && typeof player.fastSeek === 'function') player.fastSeek(details.seekTime);
+      else player.currentTime = details.seekTime;
+    });
+    setHandler('enterpictureinpicture', () => togglePictureInPicture());
+  }
 
   window.addEventListener('pagehide', function () {
     if (playerState && player.currentTime > 0) saveProgress(playerState.videoId, player.currentTime, true);
@@ -1325,6 +1672,10 @@
   document.addEventListener('visibilitychange', function () {
     if (document.hidden) {
       if (playerState && player.currentTime > 0) saveProgress(playerState.videoId, player.currentTime, true);
+      if (playerState && !player.paused) {
+        player.setAttribute('autopictureinpicture', '');
+        try { player.autoPictureInPicture = true; } catch (_error) { /* unsupported */ }
+      }
     } else if (notificationIsEnabled()) {
       showMotivationNotification(false);
       scheduleHourlyMotivation();
@@ -1336,6 +1687,10 @@
   window.addEventListener('resize', function () {
     if (!window.matchMedia('(max-width: 980px)').matches) closeMobileNav();
     if (!window.matchMedia('(max-width: 720px)').matches) closeMobileSearch();
+    if (persistentPlayer.classList.contains('is-mini')) {
+      const rect = persistentPlayer.getBoundingClientRect();
+      applyMiniPlayerRect({ left: rect.left, top: rect.top, width: rect.width }, false);
+    }
   });
 
   try {
