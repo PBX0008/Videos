@@ -1183,6 +1183,7 @@
           <span class="playlist-label">Playlist</span>
           <h1>${esc(playlist.title)}</h1>
           <div class="playlist-facts">${esc(playlist.categoryTitle || '')}<br>${compact(playlist.videoCount)} videos · ${esc(playlist.durationText || playlist.declaredDuration || '')}</div>
+          ${playlist.description ? `<p class="playlist-description">${esc(playlist.description)}</p>` : ''}
           <div class="hero-actions">
             ${firstVideoId ? `<a class="button primary" href="${esc(routeHash('watch', firstVideoId))}">${icon('play')} Play all</a>` : ''}
             <a class="button" href="${esc(routeHash('folder', playlist.parentId || playlist.categoryId))}">${icon('folder')} Open folder</a>
@@ -1205,6 +1206,25 @@
     const previousId = currentIndex > 0 ? queueIds[currentIndex - 1] : '';
     const nextId = currentIndex >= 0 && currentIndex < queueIds.length - 1 ? queueIds[currentIndex + 1] : '';
     const hue = hueFor(video.categoryTitle);
+    const details = video.details || {};
+    const detailItems = [
+      video.sessionCategory ? ['Session category', video.sessionCategory] : null,
+      details.videoOrder ? ['Review order', details.videoOrder] : null,
+      details.moduleId ? ['Module', details.moduleId] : null,
+      details.subtitle ? ['Subtitle', details.subtitle] : null,
+      details.suppliedDuration ? ['Supplied duration', details.suppliedDuration] : null,
+      details.sourceCollection ? ['Collection', details.sourceCollection] : null,
+      details.videoNote ? ['Note', details.videoNote] : null,
+    ].filter(Boolean);
+    const descriptionHtml = video.description
+      ? `<p class="video-description">${esc(video.description).replace(/\n/g, '<br>')}</p>`
+      : '';
+    const detailHtml = detailItems.length
+      ? `<div class="detail-grid">${detailItems.map(item => `<div class="detail-item"><span>${esc(item[0])}</span><strong>${esc(item[1])}</strong></div>`).join('')}</div>`
+      : '';
+    const chapterHtml = Array.isArray(video.chapters) && video.chapters.length
+      ? `<div class="chapter-section"><div class="chapter-heading"><strong>Chapters and exact timings</strong><span>${compact(video.chapters.length)} chapters</span></div><div class="chapter-list">${video.chapters.map(chapter => `<button class="chapter-jump" type="button" data-chapter-seconds="${Number(chapter.seconds || 0)}" aria-label="Play ${esc(chapter.title)} at ${esc(chapter.timeInfo)}">${chapter.thumbnail ? `<img loading="lazy" src="${esc(safeUrl(chapter.thumbnail))}" alt="" onerror="this.onerror=null;this.src='${fallbackThumb}'">` : ''}<span><b>${esc(chapter.title)}</b><small>${esc(chapter.timeInfo)}</small></span></button>`).join('')}</div></div>`
+      : '';
     setLastWatched(videoId);
 
     main.innerHTML = `
@@ -1227,7 +1247,10 @@
             </div>
             <div class="description-box">
               <strong>${esc(video.pathText)}</strong>
-              <div class="meta">Lesson ${esc(video.position)} of ${compact(queueIds.length)} · ${esc(video.duration)}<br>Continue through the playlist using the queue or the previous and next controls.</div>
+              <div class="meta">Lesson ${esc(video.position)} of ${compact(queueIds.length)} · ${esc(video.duration)}</div>
+              ${descriptionHtml}
+              ${detailHtml}
+              ${chapterHtml}
             </div>
           </div>
           <aside class="queue" aria-label="Playlist queue">
@@ -1261,14 +1284,14 @@
     };
 
     const videoMatches = Object.values(videos)
-      .map(video => ({ id: video.id, score: score(`${video.title} ${video.playlistTitle} ${video.categoryTitle} ${video.pathText} ${video.slug}`) }))
+      .map(video => ({ id: video.id, score: score(`${video.title} ${video.playlistTitle} ${video.categoryTitle} ${video.pathText} ${video.slug} ${video.description || ''} ${video.sessionCategory || ''} ${(video.chapters || []).map(chapter => chapter.title).join(' ')}`) }))
       .filter(item => item.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 60)
       .map(item => item.id);
 
     const playlistMatches = Object.values(playlists)
-      .map(playlist => ({ id: playlist.id, score: score(`${playlist.title} ${playlist.categoryTitle} ${playlist.pathText} ${playlist.slug}`) }))
+      .map(playlist => ({ id: playlist.id, score: score(`${playlist.title} ${playlist.categoryTitle} ${playlist.pathText} ${playlist.slug} ${playlist.description || ''}`) }))
       .filter(item => item.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 18)
@@ -1352,7 +1375,8 @@
     };
     player.onerror = () => showToast('Playback is unavailable or blocked for this video.');
 
-    if (player.canPlayType('application/vnd.apple.mpegurl')) {
+    const isDirectMedia = /\.(mp4|webm|ogg)(?:$|[?#])/i.test(url);
+    if (isDirectMedia || player.canPlayType('application/vnd.apple.mpegurl')) {
       player.src = url;
     } else if (window.Hls && window.Hls.isSupported()) {
       hlsInstance = new window.Hls({ maxBufferLength: 45, enableWorker: true });
@@ -1592,6 +1616,18 @@
   });
 
   document.addEventListener('click', function (event) {
+    const chapter = event.target.closest('[data-chapter-seconds]');
+    if (chapter) {
+      event.preventDefault();
+      const seconds = Math.max(0, Number(chapter.dataset.chapterSeconds || 0));
+      if (playerState && parseRoute().kind === 'watch') {
+        try { player.currentTime = seconds; } catch (_error) { /* metadata may still be loading */ }
+        player.play().catch(() => {});
+        chapter.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+        premiumHaptic('select');
+      }
+      return;
+    }
     const action = event.target.closest('[data-player-action="pip"]');
     if (!action) return;
     event.preventDefault();

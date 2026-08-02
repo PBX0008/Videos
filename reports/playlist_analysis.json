@@ -1,16 +1,16 @@
 {
   "summary": {
-    "mainCategories": 14,
-    "foldersAndCategories": 53,
+    "mainCategories": 16,
+    "foldersAndCategories": 55,
     "nestedFoldersOnly": 39,
-    "playlists": 356,
-    "playlistVideoEntries": 1519,
-    "uniqueNativeVideoIds": 1270,
+    "playlists": 360,
+    "playlistVideoEntries": 1589,
+    "uniqueNativeVideoIds": 1340,
     "videosMissingThumbnail": 0,
     "videosMissingStream": 0,
-    "totalSeconds": 646829,
-    "generatedAt": "2026-06-28T12:12:03.745631+00:00",
-    "totalDurationText": "179h 40m"
+    "totalSeconds": 895677,
+    "generatedAt": "2026-08-02T15:43:51.528928+00:00",
+    "totalDurationText": "248h 47m"
   },
   "categories": [
     {
@@ -166,6 +166,28 @@
       "folderCount": 0,
       "durationText": "1h 8m",
       "totalSeconds": 4104
+    },
+    {
+      "id": "cat-final-review",
+      "title": "Final Review",
+      "slug": "final-review",
+      "declaredVideos": 26,
+      "videoCount": 26,
+      "playlistCount": 1,
+      "folderCount": 0,
+      "durationText": "26h 40m",
+      "totalSeconds": 96039
+    },
+    {
+      "id": "cat-sessions",
+      "title": "Sessions",
+      "slug": "sessions",
+      "declaredVideos": 44,
+      "videoCount": 44,
+      "playlistCount": 3,
+      "folderCount": 0,
+      "durationText": "42h 26m",
+      "totalSeconds": 152809
     }
   ]
 }

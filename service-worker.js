@@ -1,15 +1,15 @@
 importScripts('./data/motivations.js');
 
-const CACHE_NAME = 'nclex-video-library-v9';
+const CACHE_NAME = 'nclex-video-library-v10';
 const APP_SHELL = [
   './',
   './index.html',
-  './src/styles.css?v=9',
-  './src/app.js?v=9',
+  './src/styles.css?v=10',
+  './src/app.js?v=10',
   './data/library.js',
   './data/motivations.js',
-  './assets/favicon.svg?v=9',
-  './assets/logo.svg?v=9',
+  './assets/favicon.svg?v=10',
+  './assets/logo.svg?v=10',
   './assets/fallback.svg',
   './assets/icon-192.png',
   './assets/icon-512.png',

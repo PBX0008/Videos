@@ -35534,5 +35534,2960 @@
         }
       }
     ]
+  },
+  {
+    "category": "Final Review",
+    "total_videos": 26,
+    "items": [
+      {
+        "title": "Final Review",
+        "slug": "final-review",
+        "videos": 26,
+        "duration": "26h 40m",
+        "description": "Complete NCLEX final-review lectures with the supplied descriptions, chapter titles, chapter images, and exact chapter timings.",
+        "thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+        "type": "playlist",
+        "video_links": {
+          "status": true,
+          "data": {
+            "playlist": [
+              {
+                "category_tree": [
+                  {
+                    "video_details": {
+                      "id": "final-review-1",
+                      "video_id": "final-review-1",
+                      "video_category": "final-review",
+                      "video_name": "NCLEX Strategy & Insights",
+                      "video_slug": "nclex-strategy-and-insights",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/1_nclex_strategy/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 3522,
+                      "sn_video_excerpt": "Discover key steps of study planning, manage test anxiety, and prioritize questions effectively in this must-watch series opener. Jumpstart your journey to becoming a safe, competent nurse with Mike’s strategic insights on the NCLEX.",
+                      "video_description": "Discover key steps of study planning, manage test anxiety, and prioritize questions effectively in this must-watch series opener. Jumpstart your journey to becoming a safe, competent nurse with Mike’s strategic insights on the NCLEX.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/strategy.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "5",
+                          "seconds": 0,
+                          "chapter_title": "NCLEX Strategy & Insights",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "6",
+                          "seconds": 193,
+                          "chapter_title": "3 Step Study Plan",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "3:13"
+                        },
+                        {
+                          "chapter_id": "7",
+                          "seconds": 1053,
+                          "chapter_title": "NCLEX Mindset",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "17:33"
+                        },
+                        {
+                          "chapter_id": "21",
+                          "seconds": 1391,
+                          "chapter_title": "How To Know If You Are Ready",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "23:11"
+                        },
+                        {
+                          "chapter_id": "22",
+                          "seconds": 1545,
+                          "chapter_title": "Test Anxiety & How To Manage It",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "25:45"
+                        },
+                        {
+                          "chapter_id": "23",
+                          "seconds": 1753,
+                          "chapter_title": "Failed The NCLEX?",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "29:13"
+                        },
+                        {
+                          "chapter_id": "24",
+                          "seconds": 2150,
+                          "chapter_title": "Lack of energy, focus & motivation",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "35:50"
+                        },
+                        {
+                          "chapter_id": "25",
+                          "seconds": 2346,
+                          "chapter_title": "SATA Question Mastery",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "39:06"
+                        },
+                        {
+                          "chapter_id": "26",
+                          "seconds": 2998,
+                          "chapter_title": "NCLEX Test Taking Strategy",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "49:58"
+                        },
+                        {
+                          "chapter_id": "27",
+                          "seconds": 3343,
+                          "chapter_title": "Priority vs Best Questions",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "55:43"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "1",
+                      "subtitle": "1",
+                      "video_watched_secs": "0",
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-2",
+                      "video_id": "final-review-2",
+                      "video_category": "final-review",
+                      "video_name": "Prioritization & Delegation",
+                      "video_slug": "prioritization-and-delegation",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/2_prioritization_delegation/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 3506,
+                      "sn_video_excerpt": "They key to unlocking safe practice standards with prioritization and delegation, crucial concepts that stand the test of time in every NCLEX iteration.",
+                      "video_description": "They key to unlocking safe practice standards with prioritization and delegation, crucial concepts that stand the test of time in every NCLEX iteration.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/prioritizations.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "8",
+                          "seconds": 0,
+                          "chapter_title": "Prioritization and Delegation",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "9",
+                          "seconds": 341,
+                          "chapter_title": "6 words for NCLEX Priority Clients",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "5:41"
+                        },
+                        {
+                          "chapter_id": "10",
+                          "seconds": 830,
+                          "chapter_title": "Which Client Comes First?",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "13:50"
+                        },
+                        {
+                          "chapter_id": "28",
+                          "seconds": 1229,
+                          "chapter_title": "Unstable Clients on the NCLEX",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "20:29"
+                        },
+                        {
+                          "chapter_id": "29",
+                          "seconds": 1551,
+                          "chapter_title": "What the ABCs really mean",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "25:51"
+                        },
+                        {
+                          "chapter_id": "30",
+                          "seconds": 2022,
+                          "chapter_title": "Delegation",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "33:42"
+                        },
+                        {
+                          "chapter_id": "31",
+                          "seconds": 2514,
+                          "chapter_title": "LPN & LVN Specific",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "41:54"
+                        },
+                        {
+                          "chapter_id": "32",
+                          "seconds": 2823,
+                          "chapter_title": "Delegation to UAPs",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "47:03"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "2",
+                      "subtitle": "2",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-7",
+                      "video_id": "final-review-7",
+                      "video_category": "final-review",
+                      "video_name": "Ethics & Legal Fundamentals",
+                      "video_slug": "ethics-and-legal-fundamentals",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/3_ethics_legal_terms/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 4247,
+                      "sn_video_excerpt": "Understand the essentials of top tested key points on HIPAA, legal and ethical standards. Nurse Mike guides you through all the key words ensuring you’re well-equipped for both the NCLEX and real-world dilemmas.",
+                      "video_description": "Understand the essentials of top tested key points on HIPAA, legal and ethical standards. Nurse Mike guides you through all the key words ensuring you’re well-equipped for both the NCLEX and real-world dilemmas.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/ethics.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "13",
+                          "seconds": 0,
+                          "chapter_title": "Ethics and Legal Terms",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "33",
+                          "seconds": 49,
+                          "chapter_title": "HIPAA",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "0:49"
+                        },
+                        {
+                          "chapter_id": "34",
+                          "seconds": 900,
+                          "chapter_title": "NCLEX Legal Words",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "15:00"
+                        },
+                        {
+                          "chapter_id": "35",
+                          "seconds": 1707,
+                          "chapter_title": "Ethical Key Terms",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "28:27"
+                        },
+                        {
+                          "chapter_id": "36",
+                          "seconds": 2140,
+                          "chapter_title": "Informed Consent",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "35:40"
+                        },
+                        {
+                          "chapter_id": "37",
+                          "seconds": 2737,
+                          "chapter_title": "Nurses Role for Informed Consent",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "45:37"
+                        },
+                        {
+                          "chapter_id": "38",
+                          "seconds": 3120,
+                          "chapter_title": "Advanced Directives",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "52:00"
+                        },
+                        {
+                          "chapter_id": "39",
+                          "seconds": 3754,
+                          "chapter_title": "Refusal of Care & AMA",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "62:34"
+                        },
+                        {
+                          "chapter_id": "40",
+                          "seconds": 4057,
+                          "chapter_title": "Mandatory Reporting",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "67:37"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "3",
+                      "subtitle": "7",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-3",
+                      "video_id": "final-review-3",
+                      "video_category": "final-review",
+                      "video_name": "ABG & Acid Base Imbalances",
+                      "video_slug": "abg-and-acid-base-imbalances",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/9_abgs_acid_base_imbalances/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 1483,
+                      "sn_video_excerpt": "Master complex ABGs with ease, a critical skill for the NCLEX and ensuring patient safety. Simplify the confusion of acid-base imbalances with Nurse Mike’s engaging rundown.",
+                      "video_description": "Master complex ABGs with ease, a critical skill for the NCLEX and ensuring patient safety. Simplify the confusion of acid-base imbalances with Nurse Mike’s engaging rundown.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/abg.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "1",
+                          "seconds": 0,
+                          "chapter_title": "ABGs & Acid Base Imbalances",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "2",
+                          "seconds": 188,
+                          "chapter_title": "Respiratory Acidosis vs. Alkalosis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "3:08"
+                        },
+                        {
+                          "chapter_id": "49",
+                          "seconds": 554,
+                          "chapter_title": "Metabolic Acidosis vs. Alkalosis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "9:14"
+                        },
+                        {
+                          "chapter_id": "50",
+                          "seconds": 936,
+                          "chapter_title": "ABG Numbers to Know!",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "15:36"
+                        },
+                        {
+                          "chapter_id": "51",
+                          "seconds": 1132,
+                          "chapter_title": "Practice ABG Questions",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "18:52"
+                        },
+                        {
+                          "chapter_id": "52",
+                          "seconds": 1261,
+                          "chapter_title": "Compensated vs Uncompensated",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "21:01"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "4",
+                      "subtitle": "3",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-9",
+                      "video_id": "final-review-9",
+                      "video_category": "final-review",
+                      "video_name": "Electrolytes",
+                      "video_slug": "electrolytes",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/8_electrolytes/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 1998,
+                      "sn_video_excerpt": "Finally understand electrolytes imbalances with simple memory tricks that will have you smiling! Nurse Mike will help you master electrolyte once and for all in a fun and easy way, a must for nclex success!",
+                      "video_description": "Finally understand electrolytes imbalances with simple memory tricks that will have you smiling! Nurse Mike will help you master electrolyte once and for all in a fun and easy way, a must for nclex success!",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/electrolytes.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "15",
+                          "seconds": 0,
+                          "chapter_title": "Introduction",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "41",
+                          "seconds": 236,
+                          "chapter_title": "Electroyte Numbers",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "3:56"
+                        },
+                        {
+                          "chapter_id": "42",
+                          "seconds": 423,
+                          "chapter_title": "Potassium",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "7:03"
+                        },
+                        {
+                          "chapter_id": "43",
+                          "seconds": 684,
+                          "chapter_title": "Magnesium",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "11:24"
+                        },
+                        {
+                          "chapter_id": "44",
+                          "seconds": 883,
+                          "chapter_title": "Calcium",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "14:43"
+                        },
+                        {
+                          "chapter_id": "45",
+                          "seconds": 1154,
+                          "chapter_title": "Phosphase",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "19:14"
+                        },
+                        {
+                          "chapter_id": "46",
+                          "seconds": 1252,
+                          "chapter_title": "Sodium",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "20:52"
+                        },
+                        {
+                          "chapter_id": "47",
+                          "seconds": 1479,
+                          "chapter_title": "Causes of Electrolyte Imbalances",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "24:39"
+                        },
+                        {
+                          "chapter_id": "48",
+                          "seconds": 1642,
+                          "chapter_title": "Electrolyte Treatment",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "27:22"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "5",
+                      "subtitle": "9",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-8",
+                      "video_id": "final-review-8",
+                      "video_category": "final-review",
+                      "video_name": "Labs",
+                      "video_slug": "labs",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/13_lab_values_for_the_nclex/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 1316,
+                      "sn_video_excerpt": "Solidify your understanding of lab values! Recognize critical values and when your patient is in danger. Nurse Mike helps you grasp this vital skill in analyzing and prioritizing the never ending lab numbers, a cornerstone of nclex prep and patient care!",
+                      "video_description": "Solidify your understanding of lab values! Recognize critical values and when your patient is in danger. Nurse Mike helps you grasp this vital skill in analyzing and prioritizing the never ending lab numbers, a cornerstone of nclex prep and patient care!",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/lab.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "14",
+                          "seconds": 0,
+                          "chapter_title": "Lab Values for the NCLEX",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "53",
+                          "seconds": 935,
+                          "chapter_title": "Practice NCLEX Questions",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "15:35"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "6",
+                      "subtitle": "8",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-16",
+                      "video_id": "final-review-16",
+                      "video_category": "final-review",
+                      "video_name": "Pharmacology Mastery",
+                      "video_slug": "pharmacology-mastery",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/03_pharmacology_v3/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 11366,
+                      "sn_video_excerpt": "Ace pharmacology with ease! Master the top tested NCLEX drug, dosages, drug actions and contraindications through fun mnemonic devices for quick memorization success!",
+                      "video_description": "Ace pharmacology with ease! Master the top tested NCLEX drug, dosages, drug actions and contraindications through fun mnemonic devices for quick memorization success!",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/pharmacology.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "12",
+                          "seconds": 0,
+                          "chapter_title": "Pharmacology Mastery",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "60",
+                          "seconds": 507,
+                          "chapter_title": "Top 8 Drugs to Avoid with Pregnant Clients",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "8:27"
+                        },
+                        {
+                          "chapter_id": "61",
+                          "seconds": 925,
+                          "chapter_title": "Drug Toxicity & Antidotes",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "15:25"
+                        },
+                        {
+                          "chapter_id": "62",
+                          "seconds": 1892,
+                          "chapter_title": "Blood Thinners",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "31:32"
+                        },
+                        {
+                          "chapter_id": "63",
+                          "seconds": 2796,
+                          "chapter_title": "Cardiac Meds",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "46:36"
+                        },
+                        {
+                          "chapter_id": "64",
+                          "seconds": 4500,
+                          "chapter_title": "Antibiotics",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "75:00"
+                        },
+                        {
+                          "chapter_id": "65",
+                          "seconds": 5229,
+                          "chapter_title": "Respiratory Meds",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "87:09"
+                        },
+                        {
+                          "chapter_id": "66",
+                          "seconds": 5772,
+                          "chapter_title": "Immunosuppressants & Chemo",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "96:12"
+                        },
+                        {
+                          "chapter_id": "67",
+                          "seconds": 6179,
+                          "chapter_title": "Steroids",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "102:59"
+                        },
+                        {
+                          "chapter_id": "68",
+                          "seconds": 6488,
+                          "chapter_title": "Pain Meds",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "108:08"
+                        },
+                        {
+                          "chapter_id": "69",
+                          "seconds": 7064,
+                          "chapter_title": "Muscle Relaxants",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "117:44"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "7",
+                      "subtitle": "pharmacology-mastery",
+                      "video_watched_secs": "16",
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-24",
+                      "video_id": "final-review-24",
+                      "video_category": "final-review",
+                      "video_name": "Critical Care",
+                      "video_slug": "critical-care",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/02_critical_care_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 1638,
+                      "sn_video_excerpt": "Discover the important steps to shock management, CPR, and extreme temperature injuries, crucial tools for nclex and real-world emergency excellence!",
+                      "video_description": "Discover the important steps to shock management, CPR, and extreme temperature injuries, crucial tools for nclex and real-world emergency excellence!",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/critical-care.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "313",
+                          "seconds": 0,
+                          "chapter_title": "Critical Care",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "314",
+                          "seconds": 10,
+                          "chapter_title": "Shock",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:10"
+                        },
+                        {
+                          "chapter_id": "315",
+                          "seconds": 978,
+                          "chapter_title": "CPR",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "16:18"
+                        },
+                        {
+                          "chapter_id": "316",
+                          "seconds": 1387,
+                          "chapter_title": "Hypothermia & Frostbite",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "23:07"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "8",
+                      "subtitle": "",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-25",
+                      "video_id": "final-review-25",
+                      "video_category": "final-review",
+                      "video_name": "Fundamentals",
+                      "video_slug": "fundamentals",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/17_fundamentals_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 1706,
+                      "sn_video_excerpt": "Embark on mastering nursing essentials with dosage calculations, aseptic techniques, nutrition, IV therapy troubleshooting, oxygenation, and lung sounds in this foundational NCLEX prep video.",
+                      "video_description": "Embark on mastering nursing essentials with dosage calculations, aseptic techniques, nutrition, IV therapy troubleshooting, oxygenation, and lung sounds in this foundational NCLEX prep video.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/fundamentals.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "317",
+                          "seconds": 0,
+                          "chapter_title": "Fundamentals",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "318",
+                          "seconds": 36,
+                          "chapter_title": "Dosage Calc. Memory Tricks",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:36"
+                        },
+                        {
+                          "chapter_id": "319",
+                          "seconds": 213,
+                          "chapter_title": "Asepsis/Sterility",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "3:33"
+                        },
+                        {
+                          "chapter_id": "320",
+                          "seconds": 324,
+                          "chapter_title": "Nutrition",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "5:24"
+                        },
+                        {
+                          "chapter_id": "321",
+                          "seconds": 589,
+                          "chapter_title": "IV Therapy",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "9:49"
+                        },
+                        {
+                          "chapter_id": "322",
+                          "seconds": 864,
+                          "chapter_title": "Oxygenation & Lung Sounds",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "14:24"
+                        },
+                        {
+                          "chapter_id": "323",
+                          "seconds": 1055,
+                          "chapter_title": "6 Lung Sounds",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "17:35"
+                        },
+                        {
+                          "chapter_id": "324",
+                          "seconds": 1392,
+                          "chapter_title": "Oxygen Devices",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "23:12"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "9",
+                      "subtitle": "",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-12",
+                      "video_id": "final-review-12",
+                      "video_category": "final-review",
+                      "video_name": "Infectious Disease & PPE",
+                      "video_slug": "infectious-disease-and-ppe",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/15_infectious_disease/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 624,
+                      "sn_video_excerpt": "Protect yourself and patients with our Infectious Disease & PPE guide, highlighting essential NCLEX precautions and care scenarios involving contagious diseases.",
+                      "video_description": "Protect yourself and patients with our Infectious Disease & PPE guide, highlighting essential NCLEX precautions and care scenarios involving contagious diseases.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/infectious.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "17",
+                          "seconds": 0,
+                          "chapter_title": "Infectious Disease & PPE",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "106",
+                          "seconds": 319,
+                          "chapter_title": "Airborne Precautions",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "5:19"
+                        },
+                        {
+                          "chapter_id": "107",
+                          "seconds": 503,
+                          "chapter_title": "Donning & Doffing PPE",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "8:23"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "10",
+                      "subtitle": "12",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-14",
+                      "video_id": "final-review-14",
+                      "video_category": "final-review",
+                      "video_name": "Respiratory",
+                      "video_slug": "respiratory",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/04_respiratory_v3/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 5287,
+                      "sn_video_excerpt": "Deep dive into respiratory care with Mike’s walkthrough of conditions, treatments, and NCLEX-focused airway management strategies.",
+                      "video_description": "Deep dive into respiratory care with Mike’s walkthrough of conditions, treatments, and NCLEX-focused airway management strategies.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/respiratory.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "19",
+                          "seconds": 0,
+                          "chapter_title": "Ventilators",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "54",
+                          "seconds": 2419,
+                          "chapter_title": "COPD",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "40:19"
+                        },
+                        {
+                          "chapter_id": "55",
+                          "seconds": 2918,
+                          "chapter_title": "Asthma",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "48:38"
+                        },
+                        {
+                          "chapter_id": "56",
+                          "seconds": 3444,
+                          "chapter_title": "Pneumonia",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "57:24"
+                        },
+                        {
+                          "chapter_id": "57",
+                          "seconds": 3924,
+                          "chapter_title": "Cystic Fibrosis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "65:24"
+                        },
+                        {
+                          "chapter_id": "58",
+                          "seconds": 4071,
+                          "chapter_title": "PE & DVT",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "67:51"
+                        },
+                        {
+                          "chapter_id": "59",
+                          "seconds": 4220,
+                          "chapter_title": "TB",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "70:20"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "11",
+                      "subtitle": "14",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-4",
+                      "video_id": "final-review-4",
+                      "video_category": "final-review",
+                      "video_name": "Cardiac",
+                      "video_slug": "cardiac",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/01_cardiac_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 5556,
+                      "sn_video_excerpt": "Navigate the intricacies of cardiac health, from condition management to EKG interpretation, in this comprehensive guide to acing cardiology questions on the NCLEX.",
+                      "video_description": "Navigate the intricacies of cardiac health, from condition management to EKG interpretation, in this comprehensive guide to acing cardiology questions on the NCLEX.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/cardiac.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "3",
+                          "seconds": 0,
+                          "chapter_title": "Cardiac",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "4",
+                          "seconds": 349,
+                          "chapter_title": "Heart Failure",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "5:49"
+                        },
+                        {
+                          "chapter_id": "70",
+                          "seconds": 1162,
+                          "chapter_title": "Hypertension",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "19:22"
+                        },
+                        {
+                          "chapter_id": "71",
+                          "seconds": 1690,
+                          "chapter_title": "Myocardial Infarction (Heart Attack)",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "28:10"
+                        },
+                        {
+                          "chapter_id": "72",
+                          "seconds": 1854,
+                          "chapter_title": "Angina",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "30:54"
+                        },
+                        {
+                          "chapter_id": "73",
+                          "seconds": 2934,
+                          "chapter_title": "PVD vs PAD",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "48:54"
+                        },
+                        {
+                          "chapter_id": "74",
+                          "seconds": 3240,
+                          "chapter_title": "EKG Dysrhythmias",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "54:00"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "12",
+                      "subtitle": "4",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-11",
+                      "video_id": "final-review-11",
+                      "video_category": "final-review",
+                      "video_name": "Renal",
+                      "video_slug": "renal",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/05_renal_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 3031,
+                      "sn_video_excerpt": "Master renal system intricacies, including anatomy and common pathologies like renal failure, with our focused NCLEX prep session.",
+                      "video_description": "Master renal system intricacies, including anatomy and common pathologies like renal failure, with our focused NCLEX prep session.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/renal.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "16",
+                          "seconds": 0,
+                          "chapter_title": "Renal",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "75",
+                          "seconds": 106,
+                          "chapter_title": "Renal Failure",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "1:46"
+                        },
+                        {
+                          "chapter_id": "76",
+                          "seconds": 737,
+                          "chapter_title": "Dialysis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "12:17"
+                        },
+                        {
+                          "chapter_id": "77",
+                          "seconds": 1318,
+                          "chapter_title": "Kidney Stones",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "21:58"
+                        },
+                        {
+                          "chapter_id": "78",
+                          "seconds": 1617,
+                          "chapter_title": "UTI & Pyelonephritis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "26:57"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "13",
+                      "subtitle": "renal",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-5",
+                      "video_id": "final-review-5",
+                      "video_category": "final-review",
+                      "video_name": "Endocrine",
+                      "video_slug": "endocrine",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/07_endocrine_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 8504,
+                      "sn_video_excerpt": "Dissect the complexities of the endocrine system, from hormonal disorders to acute emergencies, in this detailed exploration tailored for NCLEX success.",
+                      "video_description": "Dissect the complexities of the endocrine system, from hormonal disorders to acute emergencies, in this detailed exploration tailored for NCLEX success.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/endocrine.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "11",
+                          "seconds": 0,
+                          "chapter_title": "Endocrine",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "98",
+                          "seconds": 594,
+                          "chapter_title": "Addison's vs Cushing's Syndrome",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "9:54"
+                        },
+                        {
+                          "chapter_id": "99",
+                          "seconds": 1915,
+                          "chapter_title": "Thyroid Disorders",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "31:55"
+                        },
+                        {
+                          "chapter_id": "100",
+                          "seconds": 3264,
+                          "chapter_title": "SIADH vs. DI",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "54:24"
+                        },
+                        {
+                          "chapter_id": "101",
+                          "seconds": 4500,
+                          "chapter_title": "Diabetes Mellitus Type 1 & 2",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "75:00"
+                        },
+                        {
+                          "chapter_id": "102",
+                          "seconds": 5109,
+                          "chapter_title": "High vs Low Glucose Levels",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "85:09"
+                        },
+                        {
+                          "chapter_id": "103",
+                          "seconds": 6371,
+                          "chapter_title": "Insulin Types",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "106:11"
+                        },
+                        {
+                          "chapter_id": "104",
+                          "seconds": 6867,
+                          "chapter_title": "Treatments for Type 2 DM",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "114:27"
+                        },
+                        {
+                          "chapter_id": "105",
+                          "seconds": 7178,
+                          "chapter_title": "DKA vs HHNS",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "119:38"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "14",
+                      "subtitle": "endocrine",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-26",
+                      "video_id": "final-review-26",
+                      "video_category": "final-review",
+                      "video_name": "GI",
+                      "video_slug": "gi",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/06_gi_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 4312,
+                      "sn_video_excerpt": "From stoma care to managing GI emergencies, our session on gastrointestinal health equips you with the know-how to handle NCLEX questions confidently.",
+                      "video_description": "From stoma care to managing GI emergencies, our session on gastrointestinal health equips you with the know-how to handle NCLEX questions confidently.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/gi.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "325",
+                          "seconds": 0,
+                          "chapter_title": "GI",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "326",
+                          "seconds": 108,
+                          "chapter_title": "Colostomy & Ileostomy",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "1:48"
+                        },
+                        {
+                          "chapter_id": "327",
+                          "seconds": 447,
+                          "chapter_title": "Ulcerative Colitis vs. Crohn's Disease",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "7:27"
+                        },
+                        {
+                          "chapter_id": "328",
+                          "seconds": 1009,
+                          "chapter_title": "Appendicitis & Peritonitis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "16:49"
+                        },
+                        {
+                          "chapter_id": "329",
+                          "seconds": 1396,
+                          "chapter_title": "PUD (Peptic Ulcer Disease)",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "23:16"
+                        },
+                        {
+                          "chapter_id": "330",
+                          "seconds": 1736,
+                          "chapter_title": "Diverticulitis vs. Diverticulosis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "28:56"
+                        },
+                        {
+                          "chapter_id": "331",
+                          "seconds": 1898,
+                          "chapter_title": "TPN, NGT & Refeeding Syndrome",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "31:38"
+                        },
+                        {
+                          "chapter_id": "332",
+                          "seconds": 2382,
+                          "chapter_title": "GI Bleed",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "39:42"
+                        },
+                        {
+                          "chapter_id": "333",
+                          "seconds": 2765,
+                          "chapter_title": "Celiac Disease",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "46:05"
+                        },
+                        {
+                          "chapter_id": "334",
+                          "seconds": 2892,
+                          "chapter_title": "IBS (Irritable Bowel Syndrome)",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "48:12"
+                        },
+                        {
+                          "chapter_id": "335",
+                          "seconds": 3027,
+                          "chapter_title": "GERD & PUD",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "50:27"
+                        },
+                        {
+                          "chapter_id": "336",
+                          "seconds": 3279,
+                          "chapter_title": "SBO (Small Bowel Obstruction)",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "54:39"
+                        },
+                        {
+                          "chapter_id": "337",
+                          "seconds": 3431,
+                          "chapter_title": "GI Cancers",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "57:11"
+                        },
+                        {
+                          "chapter_id": "338",
+                          "seconds": 3735,
+                          "chapter_title": "Hiatal Hernia",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "62:15"
+                        },
+                        {
+                          "chapter_id": "339",
+                          "seconds": 3930,
+                          "chapter_title": "Dumping Syndrome",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "65:30"
+                        },
+                        {
+                          "chapter_id": "340",
+                          "seconds": 4135,
+                          "chapter_title": "GI Surgery, Dehiscence & Evisceration",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "68:55"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "15",
+                      "subtitle": "",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-27",
+                      "video_id": "final-review-27",
+                      "video_category": "final-review",
+                      "video_name": "Liver, Pancreas and Gallbladder",
+                      "video_slug": "liver-pancreas-and-gallbladder",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/08_liver_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 1773,
+                      "sn_video_excerpt": "Enhance your clinical skills with our in-depth guide on hepatobiliary and pancreatic disorders, essential for NCLEX mastery and effective patient care.",
+                      "video_description": "Enhance your clinical skills with our in-depth guide on hepatobiliary and pancreatic disorders, essential for NCLEX mastery and effective patient care.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/liver-pancreas-gallbladder.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "341",
+                          "seconds": 0,
+                          "chapter_title": "Liver Pancreas and Gallbladder",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "342",
+                          "seconds": 11,
+                          "chapter_title": "Liver",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:11"
+                        },
+                        {
+                          "chapter_id": "343",
+                          "seconds": 20,
+                          "chapter_title": "Cirrhosis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "0:20"
+                        },
+                        {
+                          "chapter_id": "344",
+                          "seconds": 1020,
+                          "chapter_title": "Hepatitis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "17:00"
+                        },
+                        {
+                          "chapter_id": "345",
+                          "seconds": 1333,
+                          "chapter_title": "Cholecystitis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "22:13"
+                        },
+                        {
+                          "chapter_id": "346",
+                          "seconds": 1534,
+                          "chapter_title": "Pancreatitis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "25:34"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "16",
+                      "subtitle": "",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-28",
+                      "video_id": "final-review-28",
+                      "video_category": "final-review",
+                      "video_name": "Blood (hematology)",
+                      "video_slug": "blood-hematology",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/09_blood_hematology_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 1339,
+                      "sn_video_excerpt": "Equip yourself with hematology know-how, covering transfusions to clotting disorders, vital for passing the NCLEX and delivering expert patient care.",
+                      "video_description": "Equip yourself with hematology know-how, covering transfusions to clotting disorders, vital for passing the NCLEX and delivering expert patient care.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/blood-hematology.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "347",
+                          "seconds": 0,
+                          "chapter_title": "Blood Hematology",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "348",
+                          "seconds": 9,
+                          "chapter_title": "Blood Transfusion & Reactions",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:09"
+                        },
+                        {
+                          "chapter_id": "349",
+                          "seconds": 636,
+                          "chapter_title": "Anemias & Sickle Cell",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "10:36"
+                        },
+                        {
+                          "chapter_id": "350",
+                          "seconds": 924,
+                          "chapter_title": "DIC",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "15:24"
+                        },
+                        {
+                          "chapter_id": "351",
+                          "seconds": 1141,
+                          "chapter_title": "Hemophilia",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "19:01"
+                        },
+                        {
+                          "chapter_id": "352",
+                          "seconds": 1234,
+                          "chapter_title": "Thrombocytopenia",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "20:34"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "17",
+                      "subtitle": "",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-29",
+                      "video_id": "final-review-29",
+                      "video_category": "final-review",
+                      "video_name": "Oncology",
+                      "video_slug": "oncology",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/10_oncology_v3/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 2304,
+                      "sn_video_excerpt": "Develop a robust understanding of oncology nursing, focusing on patient safety and cancer care complexities, an essential piece of your NCLEX preparation.",
+                      "video_description": "Develop a robust understanding of oncology nursing, focusing on patient safety and cancer care complexities, an essential piece of your NCLEX preparation.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/oncology.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "353",
+                          "seconds": 0,
+                          "chapter_title": "Oncology",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "354",
+                          "seconds": 489,
+                          "chapter_title": "Neutropenic Precautions",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "8:09"
+                        },
+                        {
+                          "chapter_id": "355",
+                          "seconds": 750,
+                          "chapter_title": "Types of Cancer",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "12:30"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "18",
+                      "subtitle": "",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-19",
+                      "video_id": "final-review-19",
+                      "video_category": "final-review",
+                      "video_name": "Integumentary (Skin)",
+                      "video_slug": "integumentary-skin",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/12_skin_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 2587,
+                      "sn_video_excerpt": "Prep for NCLEX with our skin care module, exploring burn management, wound care, and the critical 'rule of nines.'",
+                      "video_description": "Prep for NCLEX with our skin care module, exploring burn management, wound care, and the critical 'rule of nines.'",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/integumentary.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "85",
+                          "seconds": 0,
+                          "chapter_title": "Integumentary (Skin)",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "86",
+                          "seconds": 353,
+                          "chapter_title": "Treatments for Major Burns",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "5:53"
+                        },
+                        {
+                          "chapter_id": "87",
+                          "seconds": 802,
+                          "chapter_title": "Rule of 9's",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "13:22"
+                        },
+                        {
+                          "chapter_id": "88",
+                          "seconds": 1047,
+                          "chapter_title": "Pressure Injuries (Bed Sores)",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "17:27"
+                        },
+                        {
+                          "chapter_id": "89",
+                          "seconds": 1215,
+                          "chapter_title": "Stages of Pressure Injuries",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "20:15"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "19",
+                      "subtitle": "19",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-15",
+                      "video_id": "final-review-15",
+                      "video_category": "final-review",
+                      "video_name": "Musculoskeletal & Orthopedics",
+                      "video_slug": "musculoskeletal-and-orthopedics",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/14_musculoskeletal/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 2291,
+                      "sn_video_excerpt": "Build your musculoskeletal knowledge base, from amputation care to arthritis management, essential for NCLEX success and safe nursing practice.",
+                      "video_description": "Build your musculoskeletal knowledge base, from amputation care to arthritis management, essential for NCLEX success and safe nursing practice.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/musculoskeletal.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "20",
+                          "seconds": 0,
+                          "chapter_title": "Musculoskeletal",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "79",
+                          "seconds": 241,
+                          "chapter_title": "Osteoporosis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "4:01"
+                        },
+                        {
+                          "chapter_id": "80",
+                          "seconds": 475,
+                          "chapter_title": "Gout",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "7:55"
+                        },
+                        {
+                          "chapter_id": "81",
+                          "seconds": 619,
+                          "chapter_title": "RA vs OA",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "10:19"
+                        },
+                        {
+                          "chapter_id": "82",
+                          "seconds": 874,
+                          "chapter_title": "Fractures",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "14:34"
+                        },
+                        {
+                          "chapter_id": "83",
+                          "seconds": 1412,
+                          "chapter_title": "Cast Care",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "23:32"
+                        },
+                        {
+                          "chapter_id": "84",
+                          "seconds": 1848,
+                          "chapter_title": "Crutch & Cane Teaching",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "30:48"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "20",
+                      "subtitle": "15",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-23",
+                      "video_id": "final-review-23",
+                      "video_category": "final-review",
+                      "video_name": "Neuro",
+                      "video_slug": "neuro",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/17_neuro/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 2712,
+                      "sn_video_excerpt": "Tackle neurological challenges with confidence, from increased intracranial pressure protocols to managing neurodegenerative disorders, crucial for your NCLEX strategy.",
+                      "video_description": "Tackle neurological challenges with confidence, from increased intracranial pressure protocols to managing neurodegenerative disorders, crucial for your NCLEX strategy.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/neuro.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "90",
+                          "seconds": 0,
+                          "chapter_title": "Neurological Disorders",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "91",
+                          "seconds": 489,
+                          "chapter_title": "Interventions for Increased ICP",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "8:09"
+                        },
+                        {
+                          "chapter_id": "92",
+                          "seconds": 736,
+                          "chapter_title": "Seizures",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "12:16"
+                        },
+                        {
+                          "chapter_id": "93",
+                          "seconds": 1204,
+                          "chapter_title": "Strokes (CVA & TIA)",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "20:04"
+                        },
+                        {
+                          "chapter_id": "94",
+                          "seconds": 1662,
+                          "chapter_title": "Head Trauma (TBI)",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "27:42"
+                        },
+                        {
+                          "chapter_id": "95",
+                          "seconds": 1796,
+                          "chapter_title": "Meningitis",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "29:56"
+                        },
+                        {
+                          "chapter_id": "96",
+                          "seconds": 1892,
+                          "chapter_title": "Neurodegenerative Disorders",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "31:32"
+                        },
+                        {
+                          "chapter_id": "97",
+                          "seconds": 2443,
+                          "chapter_title": "Spinal Cord Injury & Autonomic Dysreflexia",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "40:43"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "21",
+                      "subtitle": "23",
+                      "video_watched_secs": "419",
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-30",
+                      "video_id": "final-review-30",
+                      "video_category": "final-review",
+                      "video_name": "Eye and Ear",
+                      "video_slug": "eye-and-ear",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/13_eye_ear_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 740,
+                      "sn_video_excerpt": "Sharpen your skills in ophthalmic and otic health, addressing everything from injuries to medication administration techniques, a must for NCLEX proficiency.",
+                      "video_description": "Sharpen your skills in ophthalmic and otic health, addressing everything from injuries to medication administration techniques, a must for NCLEX proficiency.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/eye-ear.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "356",
+                          "seconds": 0,
+                          "chapter_title": "Eye and Ear",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "357",
+                          "seconds": 8,
+                          "chapter_title": "Eye Injury",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:08"
+                        },
+                        {
+                          "chapter_id": "358",
+                          "seconds": 117,
+                          "chapter_title": "Glaucoma",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "1:57"
+                        },
+                        {
+                          "chapter_id": "359",
+                          "seconds": 350,
+                          "chapter_title": "Macular Degeneration",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "5:50"
+                        },
+                        {
+                          "chapter_id": "360",
+                          "seconds": 414,
+                          "chapter_title": "Retinal Detachment",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "6:54"
+                        },
+                        {
+                          "chapter_id": "361",
+                          "seconds": 552,
+                          "chapter_title": "Ear - Meniere's Disease",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "9:12"
+                        },
+                        {
+                          "chapter_id": "362",
+                          "seconds": 692,
+                          "chapter_title": "Giving Eye & Ear Drops - Adults vs. Children",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "11:32"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "22",
+                      "subtitle": "",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-17",
+                      "video_id": "final-review-17",
+                      "video_category": "final-review",
+                      "video_name": "Mental Health",
+                      "video_slug": "mental-health",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/14_mental_health_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 5263,
+                      "sn_video_excerpt": "Navigate mental health care with Mike’s insights on prioritizing patient needs, therapeutic communication, and crisis management for the NCLEX.",
+                      "video_description": "Navigate mental health care with Mike’s insights on prioritizing patient needs, therapeutic communication, and crisis management for the NCLEX.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/mental.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "108",
+                          "seconds": 0,
+                          "chapter_title": "Mental Health",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "109",
+                          "seconds": 249,
+                          "chapter_title": "Therapeutic Communication",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "4:09"
+                        },
+                        {
+                          "chapter_id": "110",
+                          "seconds": 996,
+                          "chapter_title": "AVOID 5 Key Words",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "16:36"
+                        },
+                        {
+                          "chapter_id": "111",
+                          "seconds": 1328,
+                          "chapter_title": "Schizophrenia",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "22:08"
+                        },
+                        {
+                          "chapter_id": "112",
+                          "seconds": 1884,
+                          "chapter_title": "Dementia vs Delirium",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "31:24"
+                        },
+                        {
+                          "chapter_id": "113",
+                          "seconds": 2239,
+                          "chapter_title": "Crisis Management",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "37:19"
+                        },
+                        {
+                          "chapter_id": "114",
+                          "seconds": 2785,
+                          "chapter_title": "Bipolar",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "46:25"
+                        },
+                        {
+                          "chapter_id": "115",
+                          "seconds": 3335,
+                          "chapter_title": "Depression",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "55:35"
+                        },
+                        {
+                          "chapter_id": "116",
+                          "seconds": 3645,
+                          "chapter_title": "Suicide Risk Assessment",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "60:45"
+                        },
+                        {
+                          "chapter_id": "117",
+                          "seconds": 4203,
+                          "chapter_title": "ECT  \"Electroconvulsive Therapy\"",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "70:03"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "23",
+                      "subtitle": "mental-health",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-6",
+                      "video_id": "final-review-6",
+                      "video_category": "final-review",
+                      "video_name": "Pediatrics",
+                      "video_slug": "pediatrics",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/15_child_health_v2/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 9014,
+                      "sn_video_excerpt": "Elevate your pediatric nursing abilities, covering development to disease management, ensuring you’re well-prepared for pediatric questions on the NCLEX.",
+                      "video_description": "Elevate your pediatric nursing abilities, covering development to disease management, ensuring you’re well-prepared for pediatric questions on the NCLEX.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/pediatrics.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "118",
+                          "seconds": 0,
+                          "chapter_title": "Pediatrics",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "119",
+                          "seconds": 797,
+                          "chapter_title": "Toilet Training",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "13:17"
+                        },
+                        {
+                          "chapter_id": "120",
+                          "seconds": 1082,
+                          "chapter_title": "Play Types",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "18:02"
+                        },
+                        {
+                          "chapter_id": "121",
+                          "seconds": 2217,
+                          "chapter_title": "Developmental Milestones",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "36:57"
+                        },
+                        {
+                          "chapter_id": "122",
+                          "seconds": 3147,
+                          "chapter_title": "Pediatric Physical Assessment",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "52:27"
+                        },
+                        {
+                          "chapter_id": "123",
+                          "seconds": 3973,
+                          "chapter_title": "Cardiac Defects",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "66:13"
+                        },
+                        {
+                          "chapter_id": "124",
+                          "seconds": 5019,
+                          "chapter_title": "Treatments for Cardiac Defects",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "83:39"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "24",
+                      "subtitle": "6",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-13",
+                      "video_id": "final-review-13",
+                      "video_category": "final-review",
+                      "video_name": "Mother baby - Maternity",
+                      "video_slug": "mother-baby-maternity",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/16_maternity_v3/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 8860,
+                      "sn_video_excerpt": "Master maternity nursing from pregnancy to postpartum care, with Mike’s guidance on critical assessments like GTPAL and APGAR for NCLEX excellence.",
+                      "video_description": "Master maternity nursing from pregnancy to postpartum care, with Mike’s guidance on critical assessments like GTPAL and APGAR for NCLEX excellence.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/maternity.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "18",
+                          "seconds": 0,
+                          "chapter_title": "Maternity",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "125",
+                          "seconds": 125,
+                          "chapter_title": "Signs of Pregnancy",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "2:05"
+                        },
+                        {
+                          "chapter_id": "126",
+                          "seconds": 372,
+                          "chapter_title": "Naegele's Rule",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "6:12"
+                        },
+                        {
+                          "chapter_id": "127",
+                          "seconds": 957,
+                          "chapter_title": "GTPAL Assessment",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "15:57"
+                        },
+                        {
+                          "chapter_id": "128",
+                          "seconds": 1375,
+                          "chapter_title": "Discomforts of Pregnancy",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "22:55"
+                        },
+                        {
+                          "chapter_id": "129",
+                          "seconds": 1680,
+                          "chapter_title": "High Risks of Pregnancy",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "28:00"
+                        },
+                        {
+                          "chapter_id": "130",
+                          "seconds": 2673,
+                          "chapter_title": "Labor & Delivery",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "44:33"
+                        },
+                        {
+                          "chapter_id": "131",
+                          "seconds": 3015,
+                          "chapter_title": "1st & 2nd Stage of Labor",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "50:15"
+                        },
+                        {
+                          "chapter_id": "132",
+                          "seconds": 3625,
+                          "chapter_title": "3rd and 4th Stage of Labor",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "60:25"
+                        },
+                        {
+                          "chapter_id": "133",
+                          "seconds": 4070,
+                          "chapter_title": "Lochia",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "67:50"
+                        },
+                        {
+                          "chapter_id": "134",
+                          "seconds": 4173,
+                          "chapter_title": "Fetal Heart Rate Monitoring",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_3.png",
+                          "time_info": "69:33"
+                        },
+                        {
+                          "chapter_id": "135",
+                          "seconds": 4653,
+                          "chapter_title": "Preterm Labor",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_4.png",
+                          "time_info": "77:33"
+                        },
+                        {
+                          "chapter_id": "136",
+                          "seconds": 4996,
+                          "chapter_title": "Uterine Inversion, PROM & AROM",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_5.png",
+                          "time_info": "83:16"
+                        },
+                        {
+                          "chapter_id": "137",
+                          "seconds": 5315,
+                          "chapter_title": "APGAR",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_6.png",
+                          "time_info": "88:35"
+                        },
+                        {
+                          "chapter_id": "138",
+                          "seconds": 5673,
+                          "chapter_title": "Newborn Assessment",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_7.png",
+                          "time_info": "94:33"
+                        },
+                        {
+                          "chapter_id": "139",
+                          "seconds": 6467,
+                          "chapter_title": "Newborn Vital Signs & Complications",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "107:47"
+                        },
+                        {
+                          "chapter_id": "140",
+                          "seconds": 6848,
+                          "chapter_title": "Postpartum Assessment",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "114:08"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "25",
+                      "subtitle": "maternity",
+                      "video_watched_secs": "419",
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "final-review-31",
+                      "video_id": "final-review-31",
+                      "video_category": "final-review",
+                      "video_name": "Reproductive",
+                      "video_slug": "reproductive",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/lectures/11_reproductive_v3/part.m3u8",
+                      "video_tags": "Final Review",
+                      "video_duration": 1060,
+                      "sn_video_excerpt": "Discover the nuances of male and female reproductive health in this comprehensive guide, enriching your NCLEX prep with expert-level insights into gender-specific care.",
+                      "video_description": "Discover the nuances of male and female reproductive health in this comprehensive guide, enriching your NCLEX prep with expert-level insights into gender-specific care.",
+                      "qb_category": null,
+                      "video_thumbnail": "/images/lectures/reproductive.jpg",
+                      "chapters": [
+                        {
+                          "chapter_id": "363",
+                          "seconds": 0,
+                          "chapter_title": "Reproductive",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_8.png",
+                          "time_info": "0:00"
+                        },
+                        {
+                          "chapter_id": "364",
+                          "seconds": 455,
+                          "chapter_title": "Male Health",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_1.png",
+                          "time_info": "7:35"
+                        },
+                        {
+                          "chapter_id": "365",
+                          "seconds": 580,
+                          "chapter_title": "Female Health",
+                          "chapter_url": "https://members.simplenursing.com/wp-content/themes/simplenursing-app/images/lectures/chapters/image_2.png",
+                          "time_info": "9:40"
+                        }
+                      ],
+                      "module_id": "1",
+                      "video_order": "26",
+                      "subtitle": "",
+                      "video_watched_secs": 0,
+                      "video_note": "",
+                      "source_collection": "Final Review"
+                    }
+                  }
+                ]
+              }
+            ],
+            "breadcrumbs": [
+              {
+                "slug": "final-review-cat",
+                "category_name": "Final Review",
+                "url": "/nclex-video-library?category=final-review-cat"
+              },
+              {
+                "slug": "final-review",
+                "category_name": "Final Review",
+                "url": "/nclex-video-library?category=final-review"
+              }
+            ]
+          },
+          "error_code": "NONE"
+        }
+      }
+    ]
+  },
+  {
+    "category": "Sessions",
+    "total_videos": 44,
+    "items": [
+      {
+        "title": "NCLEX Cram Snippets",
+        "slug": "nclex-cram-snippets",
+        "videos": 16,
+        "duration": "29m 12s",
+        "description": "Focused NCLEX strategy and priority snippets with supplied categories, durations, and playback links.",
+        "thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+        "type": "playlist",
+        "video_links": {
+          "status": true,
+          "data": {
+            "playlist": [
+              {
+                "category_tree": [
+                  {
+                    "video_details": {
+                      "id": "session-snippet-1",
+                      "video_id": "session-snippet-1",
+                      "video_category": "key-priorities",
+                      "video_name": "ABC and Systemic vs Localized Infections Key Priorities",
+                      "video_slug": "abc-and-systemic-vs-localized-infections-key-priorities",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/abc_and_systemic_vs_localized_infections_key_priorities/part.m3u8",
+                      "video_tags": "Key Priorities",
+                      "video_duration": 44,
+                      "sn_video_excerpt": "ABC and Systemic vs Localized Infections Key Priorities. Session category: Key Priorities.",
+                      "video_description": "ABC and Systemic vs Localized Infections Key Priorities. Session category: Key Priorities.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Key Priorities",
+                      "supplied_duration": "44s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-2",
+                      "video_id": "session-snippet-2",
+                      "video_category": "question-language",
+                      "video_name": "Avoid Absolutes Mastering NCLEX Question Language",
+                      "video_slug": "avoid-absolutes-mastering-nclex-question-language",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/avoid_absolutes_mastering_nclex_question_language/part.m3u8",
+                      "video_tags": "Question Language",
+                      "video_duration": 48,
+                      "sn_video_excerpt": "Avoid Absolutes Mastering NCLEX Question Language. Session category: Question Language.",
+                      "video_description": "Avoid Absolutes Mastering NCLEX Question Language. Session category: Question Language.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Question Language",
+                      "supplied_duration": "48s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-3",
+                      "video_id": "session-snippet-3",
+                      "video_category": "nclex",
+                      "video_name": "Build Confidence Review Known Topics Before Test Day",
+                      "video_slug": "build-confidence-review-known-topics-before-test-day",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/build_confidence_review_known_topics_before_test_day/part.m3u8",
+                      "video_tags": "NCLEX",
+                      "video_duration": 50,
+                      "sn_video_excerpt": "Build Confidence Review Known Topics Before Test Day. Session category: NCLEX.",
+                      "video_description": "Build Confidence Review Known Topics Before Test Day. Session category: NCLEX.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "NCLEX",
+                      "supplied_duration": "50s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-4",
+                      "video_id": "session-snippet-4",
+                      "video_category": "nclex-essentials",
+                      "video_name": "Droplet vs Airborne Precautions NCLEX Essentials",
+                      "video_slug": "droplet-vs-airborne-precautions-nclex-essentials",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/droplet_vs_airborne_precautions_nclex_essentials/part.m3u8",
+                      "video_tags": "NCLEX Essentials",
+                      "video_duration": 64,
+                      "sn_video_excerpt": "Droplet vs Airborne Precautions NCLEX Essentials. Session category: NCLEX Essentials.",
+                      "video_description": "Droplet vs Airborne Precautions NCLEX Essentials. Session category: NCLEX Essentials.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "NCLEX Essentials",
+                      "supplied_duration": "1m 4s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-5",
+                      "video_id": "session-snippet-5",
+                      "video_category": "isolation",
+                      "video_name": "N95 Respirators Key Uses for Isolation",
+                      "video_slug": "n95-respirators-key-uses-for-isolation",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/n95_respirators_key_uses_for_isolation/part.m3u8",
+                      "video_tags": "Isolation",
+                      "video_duration": 10,
+                      "sn_video_excerpt": "N95 Respirators Key Uses for Isolation. Session category: Isolation.",
+                      "video_description": "N95 Respirators Key Uses for Isolation. Session category: Isolation.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Isolation",
+                      "supplied_duration": "10s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-6",
+                      "video_id": "session-snippet-6",
+                      "video_category": "question-types",
+                      "video_name": "NGN Question Types Tackling Bowtie and Drag and Drop",
+                      "video_slug": "ngn-question-types-tackling-bowtie-and-drag-and-drop",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/ngn_question_types_tackling_bowtie_and_drag_and_drop/part.m3u8",
+                      "video_tags": "Question Types",
+                      "video_duration": 691,
+                      "sn_video_excerpt": "NGN Question Types Tackling Bowtie and Drag and Drop. Session category: Question Types.",
+                      "video_description": "NGN Question Types Tackling Bowtie and Drag and Drop. Session category: Question Types.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Question Types",
+                      "supplied_duration": "11m 31s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-7",
+                      "video_id": "session-snippet-7",
+                      "video_category": "delusions",
+                      "video_name": "Open Ended Questions Navigating Delusions with Care",
+                      "video_slug": "open-ended-questions-navigating-delusions-with-care",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/open_ended_questions_navigating_delusions_with_care/part.m3u8",
+                      "video_tags": "Delusions",
+                      "video_duration": 95,
+                      "sn_video_excerpt": "Open Ended Questions Navigating Delusions with Care. Session category: Delusions.",
+                      "video_description": "Open Ended Questions Navigating Delusions with Care. Session category: Delusions.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Delusions",
+                      "supplied_duration": "1m 35s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-8",
+                      "video_id": "session-snippet-8",
+                      "video_category": "answer-tips",
+                      "video_name": "Opposites Attract Answer Elimination Tips",
+                      "video_slug": "opposites-attract-answer-elimination-tips",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/opposites_attract_answer_elimination_tips/part.m3u8",
+                      "video_tags": "Answer Tips",
+                      "video_duration": 35,
+                      "sn_video_excerpt": "Opposites Attract Answer Elimination Tips. Session category: Answer Tips.",
+                      "video_description": "Opposites Attract Answer Elimination Tips. Session category: Answer Tips.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Answer Tips",
+                      "supplied_duration": "35s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-9",
+                      "video_id": "session-snippet-9",
+                      "video_category": "prioritizing-care",
+                      "video_name": "Patient First Machine Second Prioritizing Care",
+                      "video_slug": "patient-first-machine-second-prioritizing-care",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/patient_first_machine_second_prioritizing_care/part.m3u8",
+                      "video_tags": "Prioritizing Care",
+                      "video_duration": 34,
+                      "sn_video_excerpt": "Patient First Machine Second Prioritizing Care. Session category: Prioritizing Care.",
+                      "video_description": "Patient First Machine Second Prioritizing Care. Session category: Prioritizing Care.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Prioritizing Care",
+                      "supplied_duration": "34s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-10",
+                      "video_id": "session-snippet-10",
+                      "video_category": "nclex-strategy",
+                      "video_name": "Prioritizing Non Invasive Interventions NCLEX Strategy",
+                      "video_slug": "prioritizing-non-invasive-interventions-nclex-strategy",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/prioritizing_non_invasive_interventions_nclex_strategy/part.m3u8",
+                      "video_tags": "NCLEX Strategy",
+                      "video_duration": 86,
+                      "sn_video_excerpt": "Prioritizing Non Invasive Interventions NCLEX Strategy. Session category: NCLEX Strategy.",
+                      "video_description": "Prioritizing Non Invasive Interventions NCLEX Strategy. Session category: NCLEX Strategy.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "NCLEX Strategy",
+                      "supplied_duration": "1m 26s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-11",
+                      "video_id": "session-snippet-11",
+                      "video_category": "diet",
+                      "video_name": "RN Delegation What You Cant EAT",
+                      "video_slug": "rn-delegation-what-you-cant-eat",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/rn_delegation_what_you_cant_eat/part.m3u8",
+                      "video_tags": "Diet",
+                      "video_duration": 9,
+                      "sn_video_excerpt": "RN Delegation What You Cant EAT. Session category: Diet.",
+                      "video_description": "RN Delegation What You Cant EAT. Session category: Diet.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Diet",
+                      "supplied_duration": "9s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-12",
+                      "video_id": "session-snippet-12",
+                      "video_category": "neuro",
+                      "video_name": "Spotting Critical Changes Blood Sugar Respiratory Neuro",
+                      "video_slug": "spotting-critical-changes-blood-sugar-respiratory-neuro",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/spotting_critical_changes_blood_sugar_respiratory_neuro/part.m3u8",
+                      "video_tags": "Neuro",
+                      "video_duration": 9,
+                      "sn_video_excerpt": "Spotting Critical Changes Blood Sugar Respiratory Neuro. Session category: Neuro.",
+                      "video_description": "Spotting Critical Changes Blood Sugar Respiratory Neuro. Session category: Neuro.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Neuro",
+                      "supplied_duration": "9s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-13",
+                      "video_id": "session-snippet-13",
+                      "video_category": "changes",
+                      "video_name": "Spotting Critical Signs New Sudden Abrupt Changes",
+                      "video_slug": "spotting-critical-signs-new-sudden-abrupt-changes",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/spotting_critical_signs_new_sudden_abrupt_changes/part.m3u8",
+                      "video_tags": "Changes",
+                      "video_duration": 98,
+                      "sn_video_excerpt": "Spotting Critical Signs New Sudden Abrupt Changes. Session category: Changes.",
+                      "video_description": "Spotting Critical Signs New Sudden Abrupt Changes. Session category: Changes.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Changes",
+                      "supplied_duration": "1m 38s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-14",
+                      "video_id": "session-snippet-14",
+                      "video_category": "calm",
+                      "video_name": "Stay Calm Visualize Success and Maintain Composure",
+                      "video_slug": "stay-calm-visualize-success-and-maintain-composure",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/stay_calm_visualize_success_and_maintain_composure/part.m3u8",
+                      "video_tags": "Calm",
+                      "video_duration": 342,
+                      "sn_video_excerpt": "Stay Calm Visualize Success and Maintain Composure. Session category: Calm.",
+                      "video_description": "Stay Calm Visualize Success and Maintain Composure. Session category: Calm.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Calm",
+                      "supplied_duration": "5m 42s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-15",
+                      "video_id": "session-snippet-15",
+                      "video_category": "success",
+                      "video_name": "Targeting Test Ready Scores 65-70 Percent for NCLEX Success",
+                      "video_slug": "targeting-test-ready-scores-65-70-percent-for-nclex-success",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/targeting_test_ready_scores_percent_for_nclex_success/part.m3u8",
+                      "video_tags": "Success",
+                      "video_duration": 57,
+                      "sn_video_excerpt": "Targeting Test Ready Scores 65-70 Percent for NCLEX Success. Session category: Success.",
+                      "video_description": "Targeting Test Ready Scores 65-70 Percent for NCLEX Success. Session category: Success.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Success",
+                      "supplied_duration": "57s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "session-snippet-16",
+                      "video_id": "session-snippet-16",
+                      "video_category": "nclex",
+                      "video_name": "Turn Off Tutor Mode Simulate the Real NCLEX",
+                      "video_slug": "turn-off-tutor-mode-simulate-the-real-nclex",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/turn_off_tutor_mode_simulate_the_real_nclex/part.m3u8",
+                      "video_tags": "NCLEX",
+                      "video_duration": 80,
+                      "sn_video_excerpt": "Turn Off Tutor Mode Simulate the Real NCLEX. Session category: NCLEX.",
+                      "video_description": "Turn Off Tutor Mode Simulate the Real NCLEX. Session category: NCLEX.",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "NCLEX",
+                      "supplied_duration": "1m 20s",
+                      "source_collection": "NCLEX Cram Snippets"
+                    }
+                  }
+                ]
+              }
+            ],
+            "breadcrumbs": [
+              {
+                "slug": "sessions-cat",
+                "category_name": "Sessions",
+                "url": "/nclex-video-library?category=sessions-cat"
+              },
+              {
+                "slug": "nclex-cram-snippets",
+                "category_name": "NCLEX Cram Snippets",
+                "url": "/nclex-video-library?category=nclex-cram-snippets"
+              }
+            ]
+          },
+          "error_code": "NONE"
+        }
+      },
+      {
+        "title": "Full NCLEX Sessions",
+        "slug": "full-nclex-sessions",
+        "videos": 15,
+        "duration": "23h 8m",
+        "description": "Complete dated NCLEX review sessions with supplied durations, descriptions, and playback links.",
+        "thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+        "type": "playlist",
+        "video_links": {
+          "status": true,
+          "data": {
+            "playlist": [
+              {
+                "category_tree": [
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-1",
+                      "video_id": "full-nclex-session-1",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of April 24 2025",
+                      "video_slug": "full-session-of-april-24-2025",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20250424-210017_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5456,
+                      "sn_video_excerpt": "Full Session of April 24 2025",
+                      "video_description": "Full Session of April 24 2025",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 30m 56s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-2",
+                      "video_id": "full-nclex-session-2",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of April 3 2025",
+                      "video_slug": "full-session-of-april-3-2025",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20250404-000006_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5596,
+                      "sn_video_excerpt": "Full Session of April 3 2025",
+                      "video_description": "Full Session of April 3 2025",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 33m 16s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-3",
+                      "video_id": "full-nclex-session-3",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of March 20 2025",
+                      "video_slug": "full-session-of-march-20-2025",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20250320-210041_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5372,
+                      "sn_video_excerpt": "Full Session of March 20 2025",
+                      "video_description": "Full Session of March 20 2025",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 29m 32s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-4",
+                      "video_id": "full-nclex-session-4",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of February 27 2025",
+                      "video_slug": "full-session-of-february-27-2025",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20250228-005959_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5582,
+                      "sn_video_excerpt": "Full Session of February 27 2025",
+                      "video_description": "Full Session of February 27 2025",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 33m 2s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-5",
+                      "video_id": "full-nclex-session-5",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of February 13 2025",
+                      "video_slug": "full-session-of-february-13-2025",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20250213-215721_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5611,
+                      "sn_video_excerpt": "Full Session of February 2 2025",
+                      "video_description": "Full Session of February 2 2025",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 33m 31s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-6",
+                      "video_id": "full-nclex-session-6",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of December 19 2024",
+                      "video_slug": "full-session-of-december-19-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20241220-010042_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5568,
+                      "sn_video_excerpt": "Full Session of December 19 2024",
+                      "video_description": "Full Session of December 19 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 32m 48s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-7",
+                      "video_id": "full-nclex-session-7",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of December 5 2024",
+                      "video_slug": "full-session-of-december-5-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20241205-220112_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5583,
+                      "sn_video_excerpt": "Full Session of December 5 2024",
+                      "video_description": "Full Session of December 5 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 33m 3s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-8",
+                      "video_id": "full-nclex-session-8",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of November 21 2024",
+                      "video_slug": "full-session-of-november-21-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20241122-010025_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5400,
+                      "sn_video_excerpt": "Full Session of November 21 2024",
+                      "video_description": "Full Session of November 21 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 30m 0s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-9",
+                      "video_id": "full-nclex-session-9",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of November 7 2024",
+                      "video_slug": "full-session-of-november-7-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20241107-220102_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5505,
+                      "sn_video_excerpt": "Full Session of November 7 2024",
+                      "video_description": "Full Session of November 7 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 31m 45s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-10",
+                      "video_id": "full-nclex-session-10",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of October 17 2024",
+                      "video_slug": "full-session-of-october-17-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20241018-000003_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5766,
+                      "sn_video_excerpt": "Full Session of October 17 2024",
+                      "video_description": "Full Session of October 17 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 36m 6s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-11",
+                      "video_id": "full-nclex-session-11",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of October 3 2024",
+                      "video_slug": "full-session-of-october-3-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20241003-205848_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5821,
+                      "sn_video_excerpt": "Full Session of October 3 2024",
+                      "video_description": "Full Session of October 3 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 37m 1s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-12",
+                      "video_id": "full-nclex-session-12",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of August 11 2024",
+                      "video_slug": "full-session-of-august-11-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20240812-000005_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5443,
+                      "sn_video_excerpt": "Full Session of August 11 2024",
+                      "video_description": "Full Session of August 11 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 30m 43s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-13",
+                      "video_id": "full-nclex-session-13",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of August 1 2024",
+                      "video_slug": "full-session-of-august-1-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20240801-210016_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5488,
+                      "sn_video_excerpt": "Full Session of August 1 2024",
+                      "video_description": "Full Session of August 1 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 31m 28s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-14",
+                      "video_id": "full-nclex-session-14",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of June 28 2024",
+                      "video_slug": "full-session-of-june-28-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20240629-000025_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5502,
+                      "sn_video_excerpt": "Full Session of June 28 2024",
+                      "video_description": "Full Session of June 28 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 31m 42s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "full-nclex-session-15",
+                      "video_id": "full-nclex-session-15",
+                      "video_category": "full-nclex-sessions",
+                      "video_name": "Full Session of June 26 2024",
+                      "video_slug": "full-session-of-june-26-2024",
+                      "video_url": "https://d1pumg6d5kr18o.cloudfront.net/nclex_cram/gmt20240626-205943_recording/part.m3u8",
+                      "video_tags": "Full NCLEX Sessions",
+                      "video_duration": 5640,
+                      "sn_video_excerpt": "Full Session of June 26 2024",
+                      "video_description": "Full Session of June 26 2024",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "Full NCLEX Sessions",
+                      "supplied_duration": "1h 34m 0s",
+                      "source_collection": "Full NCLEX Sessions"
+                    }
+                  }
+                ]
+              }
+            ],
+            "breadcrumbs": [
+              {
+                "slug": "sessions-cat",
+                "category_name": "Sessions",
+                "url": "/nclex-video-library?category=sessions-cat"
+              },
+              {
+                "slug": "full-nclex-sessions",
+                "category_name": "Full NCLEX Sessions",
+                "url": "/nclex-video-library?category=full-nclex-sessions"
+              }
+            ]
+          },
+          "error_code": "NONE"
+        }
+      },
+      {
+        "title": "New Grad Sessions",
+        "slug": "new-grad-sessions",
+        "videos": 13,
+        "duration": "18h 48m",
+        "description": "Full new-graduate nursing sessions with supplied durations, descriptions, and direct MP4 playback links.",
+        "thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+        "type": "playlist",
+        "video_links": {
+          "status": true,
+          "data": {
+            "playlist": [
+              {
+                "category_tree": [
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-1",
+                      "video_id": "new-grad-session-1",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "New Nurse. First Paycheck. Now What? Finance Tips for New Grad Nurses",
+                      "video_slug": "new-nurse-first-paycheck-now-what-finance-tips-for-new-grad-nurses",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nurse%20Practitioner%20CE/Common/EliteNPCN12.10.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5546,
+                      "sn_video_excerpt": "New Nurse. First Paycheck. Now What? Finance Tips for New Grad Nurses",
+                      "video_description": "New Nurse. First Paycheck. Now What? Finance Tips for New Grad Nurses",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:32:26",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-2",
+                      "video_id": "new-grad-session-2",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "Land That Job! Interview Advice for New Grad Nurses",
+                      "video_slug": "land-that-job-interview-advice-for-new-grad-nurses",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nurse%20Practitioner%20QE/Common/ENCN1.21.26.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5163,
+                      "sn_video_excerpt": "Land That Job! Interview Advice for New Grad Nurses",
+                      "video_description": "Land That Job! Interview Advice for New Grad Nurses",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:26:03",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-3",
+                      "video_id": "new-grad-session-3",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "Holiday Survival Guide for New Grad Nurses",
+                      "video_slug": "holiday-survival-guide-for-new-grad-nurses",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nurse%20Practitioner%20QE/Common/ENCN11.19.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 4209,
+                      "sn_video_excerpt": "Holiday Survival Guide for New Grad Nurses",
+                      "video_description": "Holiday Survival Guide for New Grad Nurses",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:10:09",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-4",
+                      "video_id": "new-grad-session-4",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "From Panic to Practice—How to Conquer Your New Grad Fears",
+                      "video_slug": "from-panic-to-practice-how-to-conquer-your-new-grad-fears",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nursing%20CE/Common/SNCN10.22.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5192,
+                      "sn_video_excerpt": "From Panic to Practice—How to Conquer Your New Grad Fears",
+                      "video_description": "From Panic to Practice—How to Conquer Your New Grad Fears",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:26:32",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-5",
+                      "video_id": "new-grad-session-5",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "Learn More Earn More—The Power of Lifelong Learning",
+                      "video_slug": "learn-more-earn-more-the-power-of-lifelong-learning",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nursing%20CE/Common/EliteCN9.24.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5392,
+                      "sn_video_excerpt": "Learn More Earn More—The Power of Lifelong Learning",
+                      "video_description": "Learn More Earn More—The Power of Lifelong Learning",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:29:52",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-6",
+                      "video_id": "new-grad-session-6",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "Oh ****! Navigating Mistakes as a New Grad Nurse",
+                      "video_slug": "oh-navigating-mistakes-as-a-new-grad-nurse",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nursing%20CE/Common/ENPCN8.20.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5701,
+                      "sn_video_excerpt": "Oh ****! Navigating Mistakes as a New Grad Nurse",
+                      "video_description": "Oh ****! Navigating Mistakes as a New Grad Nurse",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:35:01",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-7",
+                      "video_id": "new-grad-session-7",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "You’re Not Alone—Support Systems for New Grad Nurses",
+                      "video_slug": "you-re-not-alone-support-systems-for-new-grad-nurses",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nursing%20CE/Common/ENCN7.23.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 4980,
+                      "sn_video_excerpt": "You’re Not Alone—Support Systems for New Grad Nurses",
+                      "video_description": "You’re Not Alone—Support Systems for New Grad Nurses",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:23:00",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-8",
+                      "video_id": "new-grad-session-8",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "Beyond the Bedside—Nursing Opportunities Outside the Hospital",
+                      "video_slug": "beyond-the-bedside-nursing-opportunities-outside-the-hospital",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nursing%20CE/Common/SNCN6.18.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5061,
+                      "sn_video_excerpt": "Beyond the Bedside—Nursing Opportunities Outside the Hospital",
+                      "video_description": "Beyond the Bedside—Nursing Opportunities Outside the Hospital",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:24:21",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-9",
+                      "video_id": "new-grad-session-9",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "You’re Hired! Advice for Your First Year as a New Grad Nurse",
+                      "video_slug": "you-re-hired-advice-for-your-first-year-as-a-new-grad-nurse",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nursing%20CE/Common/CareerNight5.28.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5382,
+                      "sn_video_excerpt": "You’re Hired! Advice for Your First Year as a New Grad Nurse",
+                      "video_description": "You’re Hired! Advice for Your First Year as a New Grad Nurse",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:29:42",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-10",
+                      "video_id": "new-grad-session-10",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "9 Unexpected Perks for the New Grad Nurse",
+                      "video_slug": "9-unexpected-perks-for-the-new-grad-nurse",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nursing%20CE/Common/UnexpectedPerksfortheNewGradNurse.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5276,
+                      "sn_video_excerpt": "9 Unexpected Perks for the New Grad Nurse",
+                      "video_description": "9 Unexpected Perks for the New Grad Nurse",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:27:56",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-11",
+                      "video_id": "new-grad-session-11",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "8 Realities to Expect in Your First Month as a New Grad Nurse",
+                      "video_slug": "8-realities-to-expect-in-your-first-month-as-a-new-grad-nurse",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nursing%20CE/Common/Carrernight3.25.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5511,
+                      "sn_video_excerpt": "8 Realities to Expect in Your First Month as a New Grad Nurse",
+                      "video_description": "8 Realities to Expect in Your First Month as a New Grad Nurse",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:31:51",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-12",
+                      "video_id": "new-grad-session-12",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "7 Expert Tips to Land Your First Nursing Job",
+                      "video_slug": "7-expert-tips-to-land-your-first-nursing-job",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nurse%20Practitioner%20CE/Common/EliteNP2.26.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 4659,
+                      "sn_video_excerpt": "7 Expert Tips to Land Your First Nursing Job",
+                      "video_description": "7 Expert Tips to Land Your First Nursing Job",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:17:39",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  },
+                  {
+                    "video_details": {
+                      "id": "new-grad-session-13",
+                      "video_id": "new-grad-session-13",
+                      "video_category": "new-grad-sessions",
+                      "video_name": "10 Common Pitfalls for New Grad Nurses & How to Avoid Them",
+                      "video_slug": "10-common-pitfalls-for-new-grad-nurses-and-how-to-avoid-them",
+                      "video_url": "https://vc5.mckissock.com/vc5/VC/Nurse%20Practitioner%20CE/Common/CarrerNight1.28.25.mp4",
+                      "video_tags": "New Grad Sessions",
+                      "video_duration": 5652,
+                      "sn_video_excerpt": "10 Common Pitfalls for New Grad Nurses & How to Avoid Them",
+                      "video_description": "10 Common Pitfalls for New Grad Nurses & How to Avoid Them",
+                      "qb_category": null,
+                      "video_thumbnail": "/wp-content/uploads/2020/06/small-logo.png",
+                      "session_category": "New Grad Sessions",
+                      "supplied_duration": "1:34:12",
+                      "source_collection": "New Grad Sessions"
+                    }
+                  }
+                ]
+              }
+            ],
+            "breadcrumbs": [
+              {
+                "slug": "sessions-cat",
+                "category_name": "Sessions",
+                "url": "/nclex-video-library?category=sessions-cat"
+              },
+              {
+                "slug": "new-grad-sessions",
+                "category_name": "New Grad Sessions",
+                "url": "/nclex-video-library?category=new-grad-sessions"
+              }
+            ]
+          },
+          "error_code": "NONE"
+        }
+      }
+    ]
   }
 ]

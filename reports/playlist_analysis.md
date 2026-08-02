@@ -2,18 +2,18 @@
 
 Source file: `playlists_enriched.json`
 
-Generated: 2026-06-28T12:12:03.745631+00:00
+Generated: 2026-08-02T15:43:51.528928+00:00
 
 ## Totals
 
-- **mainCategories**: 14
+- **mainCategories**: 16
 - **nestedFoldersOnly**: 39
-- **playlists**: 356
-- **playlistVideoEntries**: 1519
-- **uniqueNativeVideoIds**: 1270
+- **playlists**: 360
+- **playlistVideoEntries**: 1589
+- **uniqueNativeVideoIds**: 1340
 - **videosMissingThumbnail**: 0
 - **videosMissingStream**: 0
-- **totalDurationText**: 179h 40m
+- **totalDurationText**: 248h 47m
 
 ## Main categories
 
@@ -33,3 +33,5 @@ Generated: 2026-06-28T12:12:03.745631+00:00
 | Nurse Mike's Memory Music | 0 | 1 | 19 | 1h 3m | 24 |
 | New Grad Support | 0 | 1 | 3 | 25m 59s | 3 |
 | Mini Lesson Series | 0 | 1 | 9 | 1h 8m | 9 |
+| Final Review | 0 | 1 | 26 | 26h 40m | 26 |
+| Sessions | 0 | 3 | 44 | 42h 26m | 44 |

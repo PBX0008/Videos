@@ -127,6 +127,7 @@ def main() -> None:
                     'pathSlugs': path_slugs + [clean_slug], 'parentId': parent_id,
                     'categoryId': 'cat-' + path_slugs[0] if path_slugs else parent_id,
                     'categoryTitle': path_titles[0] if path_titles else '',
+                    'description': str(item.get('description') or '').strip(),
                     'declaredVideos': item.get('videos'), 'declaredDuration': item.get('duration'),
                     'videoCount': len(extracted), 'totalSeconds': total_sec,
                     'durationText': duration_text(total_sec),
@@ -140,10 +141,34 @@ def main() -> None:
                     vid = 'video-' + hashlib.md5(f'{pid}/{vi}/{native_id}'.encode()).hexdigest()[:14]
                     sec = seconds(vd.get('video_duration'))
                     thumb = thumb_url(vd.get('video_thumbnail')) or playlists[pid]['thumbnail']
+                    chapters = []
+                    for chapter in vd.get('chapters') or []:
+                        chapter_seconds = seconds(chapter.get('seconds'))
+                        chapters.append({
+                            'id': str(chapter.get('chapter_id') or chapter.get('id') or ''),
+                            'title': str(chapter.get('chapter_title') or chapter.get('title') or '').strip(),
+                            'seconds': chapter_seconds,
+                            'timeInfo': str(chapter.get('time_info') or time_human(chapter_seconds)).strip(),
+                            'thumbnail': thumb_url(chapter.get('chapter_url') or chapter.get('thumbnail')),
+                        })
+                    description = str(vd.get('video_description') or vd.get('description') or vd.get('sn_video_excerpt') or '').strip()
+                    details = {
+                        'moduleId': vd.get('module_id'),
+                        'videoOrder': vd.get('video_order'),
+                        'subtitle': vd.get('subtitle'),
+                        'videoNote': vd.get('video_note'),
+                        'videoWatchedSecs': vd.get('video_watched_secs'),
+                        'suppliedDuration': vd.get('supplied_duration'),
+                        'sourceCollection': vd.get('source_collection'),
+                    }
                     record = {
                         'id': vid, 'position': vi + 1, 'title': vd.get('video_name') or title,
                         'slug': vd.get('video_slug') or slugify(vd.get('video_name') or title),
                         'streamUrl': str(vd.get('video_url') or '').strip(),
+                        'description': description,
+                        'sessionCategory': str(vd.get('session_category') or '').strip(),
+                        'chapters': chapters,
+                        'details': details,
                         'durationSeconds': sec, 'duration': time_human(sec), 'durationText': duration_text(sec),
                         'thumbnail': thumb, 'native': {'id': vd.get('id'), 'video_id': vd.get('video_id'), 'video_category': vd.get('video_category'), 'tags': vd.get('video_tags'), 'excerpt': vd.get('sn_video_excerpt'), 'qb_category': vd.get('qb_category')},
                         'playlistId': pid, 'playlistTitle': title, 'categoryId': playlists[pid]['categoryId'],
@@ -159,6 +184,7 @@ def main() -> None:
                         'video_position': vi + 1, 'video_title': record['title'], 'video_slug': record['slug'],
                         'video_duration': record['duration'], 'video_duration_seconds': sec,
                         'thumbnail': record['thumbnail'], 'stream_url': record['streamUrl'],
+                        'description': record['description'], 'chapter_count': len(record['chapters']),
                         'video_id': record['native']['video_id'], 'internal_id': record['native']['id'],
                         'category_tree': record['pathText'],
                     })
